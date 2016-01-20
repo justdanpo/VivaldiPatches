@@ -1,0 +1,11 @@
+﻿#Show unicode in the addressbar
+#Отображение национальных символов в адресной строке
+======================================================================
+ [-487:[function(e,t){"use strict";var n=e(80),i=function()-] {+487:[function(e,t){"use strict";var n=e(80),pud=e(9),ghn=e(252),i=function()+}
+======================================================================
+ [-copyParams:!!n})},this.getDisplayUrl=function-] {+copyParams:!!n})},this.cvturl=function(e){var hn=ghn.parse(e).hostname+"";var uhn=pud.toUnicode(hn);e=decodeURIComponent(e);return e.replace(hn,uhn).replace(/ /g,"%20");},this.getDisplayUrl=function+}
+======================================================================
+ [-fieldGo:this.urlFieldGo,url:this.props.page&&this.props.page.get("url")||""-] {+fieldGo:this.urlFieldGo,url:j.cvturl(this.props.page&&this.props.page.get("url")||"")+}
+======================================================================
+ [-this._defaultMapUrlToDisplayUrl(e,i);break}}return e}-] {+this._defaultMapUrlToDisplayUrl(e,i);break}}return this.cvturl(e)}+}
+======================================================================

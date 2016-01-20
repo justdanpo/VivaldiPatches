@@ -1,0 +1,5 @@
+﻿#Ctrl+Wheel page zoom updates zoom indicator
+#Масштаб страницы колесом обновляет ползунок в статусной строке
+======================================================================
+ [-n.setZoom(t.refs.zoomslider.rangeCheck(Math.round(10*r)/10))}-] {+n.setZoom(t.refs.zoomslider.rangeCheck(Math.round(10*r)/10)) && t.refs.zoomslider.forceZoomState(t.refs.zoomslider.rangeCheck(Math.round(10*r)/10))}+}
+======================================================================

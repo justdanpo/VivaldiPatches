@@ -1,0 +1,5 @@
+﻿#Disable tabs cycling with mouse wheel over tabbar
+#Отключаем переключение табов вращением колеса над таббаром
+======================================================================
+ [-this.onMouseWheel=function(e){var t=!1;for(var n in e.path)if(e.path.hasOwnProperty(n)&&"tabs-container"-] {+this.onMouseWheel=function(e){return;var t=!1;for(var n in e.path)if(e.path.hasOwnProperty(n)&&"tabs-container"+}
+======================================================================
