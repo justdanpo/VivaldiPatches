@@ -1,4 +1,4 @@
-﻿#Next To Related Tabs -> Next To Related TAB
+﻿#Next To Related Tabs -> Right of Current Tab
 ======================================================================
  [-if(a.isEmpty()===!1){var o=a.last().get("index")+1-] {+if(!0===!1){var o=a.last().get("index")+1+}
 ======================================================================
