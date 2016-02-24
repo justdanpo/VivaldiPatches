@@ -1,0 +1,7 @@
+﻿#Show unicode urls in the statusbar
+#Отображение национальных символов в ссылках в статусной строке
+======================================================================
+ [-handleOnTargetURLChanged"},W=r.createClass({displayName:"WebPageContent",-] {+handleOnTargetURLChanged"},pud=e(4),parser=e(399),W=r.createClass({displayName:"WebPageContent",+}
+======================================================================
+ [-handleOnTargetURLChanged:function(e){v.setStatus(e.newUrl),E.setTargetURL(e.newUrl)},-] {+handleOnTargetURLChanged:function(e){var t=e.newUrl,hn=parser.parse(t).hostname+"",uhn=pud.toUnicode(hn);t=decodeURIComponent(t).replace(hn,uhn).replace(/ /g,"%20");v.setStatus(t), E.setTargetURL(e.newUrl)},+}
+======================================================================
