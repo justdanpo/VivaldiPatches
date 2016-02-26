@@ -1,0 +1,7 @@
+﻿#Show unicode in the addressbar
+#Отображение национальных символов в адресной строке
+======================================================================
+ [-"Win32"===navigator.platform,$=-] {+"Win32"===navigator.platform,pud=e(4),$=+}
+======================================================================
+ [-getDisplayURL:function(e){if(e){var t=K(e.get("url"));if-] {+getDisplayURL:function(e){if(e){var t=K(e.get("url"));var hn=z.parse(t).hostname+"",uhn=pud.toUnicode(hn);t=decodeURIComponent(t).replace(hn,uhn).replace(/ /g,"%20");if+}
+======================================================================
