@@ -1,7 +1,9 @@
 ﻿#Show unicode in the addressbar
 #Отображение национальных символов в адресной строке
 ======================================================================
- [-"Win32"===navigator.platform,$=-] {+"Win32"===navigator.platform,pud=e(4),$=+}
-======================================================================
- [-getDisplayURL:function(e){if(e){var t=K(e.get("url"));if-] {+getDisplayURL:function(e){if(e){var t=K(e.get("url"));var hn=z.parse(t).hostname+"",uhn=pud.toUnicode(hn);t=decodeURIComponent(t).replace(hn,uhn).replace(/ /g,"%20");if+}
+#- 399: contains .prototype.parseHost
+#- 4: contains /[^\x20-\x7E]/
+ [-var a=function(){var e=this;this.internals={settings-] {+var ghn=e(399),pud=e(4);var a=function(){var e=this;this.internals={settings+}
+#this.getDisplayUrl=
+ [-this._defaultMapUrlToDisplayUrl(e,i);break}}return e},-] {+this._defaultMapUrlToDisplayUrl(e,i);break}}return this.cvturl(e)},this.cvturl=function(e){var hn=ghn.parse(e).hostname+"";var uhn=pud.toUnicode(hn);e=decodeURIComponent(e);return e.replace(hn,uhn).replace(/ /g,"%20");},+}
 ======================================================================
