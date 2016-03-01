@@ -1,0 +1,9 @@
+﻿#"Show Tab Thumbnails": now tabs can't be resized when the option is disabled
+#"Эскизы вкладок на панели": когда отключено, табы нельзя растягивать
+======================================================================
+ [-r.createElement(A,{onSlidebarMove:this.handleTabsMove,onDoubleClick:this.switchTabView,position:this.props.tabPosition})-] {+r.createElement("div",{style:{ref:"fullwidthheight",display:this.state.TAB_THUMBNAILS_ENABLED?"inline-block":"none"}},r.createElement(A,{onSlidebarMove:this.handleTabsMove,onDoubleClick:this.switchTabView,position:this.props.tabPosition}))+}
+======================================================================
+ [-:w>n?(n=w,p.set({TAB_THUMBNAILS_ENABLED:!1}))-] {+:w>n?(n=w)+}
+======================================================================
+ [-,p.set({TABBAR_WIDTH:this.state.tabsWidth}))-] {+,p.set({TABBAR_WIDTH:this.state.tabsWidth})),this.refs.fullwidthheight.style.display=this.state.TAB_THUMBNAILS_ENABLED?"inline-block":"none"+}
+======================================================================
