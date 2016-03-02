@@ -3,6 +3,8 @@
 ======================================================================
  [-r.createElement(d,{onSlidebarMove:this.handleTabsMove,onDoubleClick:this.switchTabView,position:this.props.tabPosition})-] {+r.createElement("div",{style:{ref:"fullwidthheight",display:this.state.TAB_THUMBNAILS_ENABLED?"inline-block":"none"}},r.createElement(d,{onSlidebarMove:this.handleTabsMove,onDoubleClick:this.switchTabView,position:this.props.tabPosition}))+}
 ======================================================================
+ [-(this.state.tabsHeight=I,setTimeout(function(){h.set({TAB_THUMBNAILS_ENABLED:!1})},500))-] {+(this.state.tabsHeight=I)+}
+======================================================================
  [-:I>n?(n=I,h.set({TAB_THUMBNAILS_ENABLED:!1}))-] {+:I>n?(n=I)+}
 ======================================================================
  [-,h.set({TABBAR_WIDTH:this.state.tabsWidth}))-] {+,h.set({TABBAR_WIDTH:this.state.tabsWidth})),this.refs.fullwidthheight.style.display=this.state.TAB_THUMBNAILS_ENABLED?"inline-block":"none"+}
