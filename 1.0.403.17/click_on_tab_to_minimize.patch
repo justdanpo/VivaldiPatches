@@ -1,5 +1,5 @@
 ﻿#Click on tab to minimize
 #Сворачивать щелчком по вкладке
 ======================================================================
- [-,e.get("active")||(t.stopPropagation(),m.openPage(e))-] {+;if(e.get("active")){this.switchBackBySetting(e);}else{t.stopPropagation();m.openPage(e);}+}
+ [-,e.get("active")||(t.stopPropagation(),m.openPage(e))-] {+;if(e.get("active")){n.nextTick("recently used"===this.state.TAB_CYCLING_ORDER?function(){return m.cycleByHistory(e,{goBack:!0})}:function(){return m.cycleByOrder(e,{goBack:!0})});}else{t.stopPropagation();m.openPage(e);}+}
 ======================================================================
