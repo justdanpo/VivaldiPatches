@@ -1,0 +1,5 @@
+﻿#SpeedDial: Ctrl+LeftClick opens a link in a background tab
+#Экспресс-панель: Ctrl+LeftClick открывает ссылку в фоновой вкладке
+======================================================================
+ [-openSpeedDialNodeHandler:function(e,t){var n=1===t.button,i=1===t.button;this.openSpeedDialNode-] {+openSpeedDialNodeHandler:function(e,t){var n=(1===t.button)||(0===t.button&&t.ctrlKey),i=n;this.openSpeedDialNode+}
+======================================================================
