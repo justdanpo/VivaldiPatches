@@ -1,0 +1,7 @@
+﻿#New notes at the top
+#Новые заметки в начале
+======================================================================
+ [-,_.notes.create({type:"note",parentId:e.toString()},function(e){this.refs.notesTree-] {+,_.notes.create({type:"note",parentId:e.toString()},function(e){_.notes.move(e.id,{index:0});this.refs.notesTree+}
+======================================================================
+ [-,_.notes.create({type:"folder",title:"",parentId:e.toString()},function(e){this.refs.notesTree&&-] {+,_.notes.create({type:"folder",title:"",parentId:e.toString()},function(e){_.notes.move(e.id,{index:0});this.refs.notesTree&&+}
+======================================================================
