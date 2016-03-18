@@ -1,0 +1,11 @@
+﻿#Fix unicode in the addressbar: unicode domains & space character
+#Исправление национальных символов в адресной строке: юникодные домены и знак пробела
+======================================================================
+#ghn: e=a(e.trim()).replace(/^\/\//,"http://");var u=i.parse(e); << i
+#pud: x.toUnicode << x
+ [-var s=function(){var e=this;this.internals={settings-] {+var ghn=n(32),pud=n(481);var s=function(){var e=this;this.internals={settings+}
+======================================================================
+ [-this._defaultMapUrlToDisplayUrl(e,i);break}}return e},-] {+this._defaultMapUrlToDisplayUrl(e,i);break}}return this.cvturl(e)},this.cvturl=function(e){var hn=ghn.parse(e).hostname+"";var uhn=pud.toUnicode(hn);return e.replace(hn,uhn);},+}
+======================================================================
+ [-getDisplayUrl(e));return decodeURIComponent(t)-] {+getDisplayUrl(e));return decodeURIComponent(t).replace(/ /g,"%20")+}
+======================================================================

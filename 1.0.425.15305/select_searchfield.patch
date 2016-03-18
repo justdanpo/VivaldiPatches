@@ -1,0 +1,5 @@
+﻿#Select text on searchfield focus
+#Выделение текста при активации поля поиска
+======================================================================
+ [-setState(this.props.page,{editText:""})},onFocus:function(){this.setState({focused:!0})},onBlur:-] {+setState(this.props.page,{editText:""})},onFocus:function(){if(!this.state.focused){this.focusField();}this.setState({focused:!0})},onBlur:+}
+======================================================================

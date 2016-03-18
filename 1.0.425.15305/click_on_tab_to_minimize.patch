@@ -1,0 +1,6 @@
+﻿#Click on tab to minimize
+#Сворачивать щелчком по вкладке
+======================================================================
+ [-selectTab:function(e,t){A.clearTooltip(),e.get("active")?g.clearSelection():(t.stopPropagation(),g.openPage(e))}-] {+selectTab:function(e,u){A.clearTooltip(),e.get("active")?(g.clearSelection(),t.nextTick("recently used"===this.state.TAB_CYCLING_ORDER?function(){return g.cycleByHistory(e,{goBack:!0})}:function(){return g.cycleByOrder(e,{goBack:!0})})):(u.stopPropagation(),g.openPage(e))}+}
+======================================================================
+
