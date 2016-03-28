@@ -1,0 +1,5 @@
+﻿#Show progressbar on open url with no delay
+#Показ прогрессбара при открытии ссылки без задержек
+======================================================================
+ [-"start"===i?this.setState(Object.assign({},l,{currentPageId:e.get("id"),isStarted:!0})):"stop"===i-] {+"start"===i?this.setState(Object.assign({},l,{currentPageId:e.get("id"),isProgressing:!0,isStarted:!0})):"stop"===i+}
+======================================================================
