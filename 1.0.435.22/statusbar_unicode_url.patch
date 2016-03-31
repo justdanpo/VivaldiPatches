@@ -1,0 +1,7 @@
+﻿#Fix unicode urls in the statusbar: unicode domains & space character
+#Исправление национальных символов в ссылках в статусной строке: юникодные домены и знак пробела
+======================================================================
+ [-handleOnTargetURLChanged"},W=r.createClass({displayName:"WebPageContent",-] {+handleOnTargetURLChanged"},pud=n(490),parser=n(33),W=r.createClass({displayName:"WebPageContent",+}
+======================================================================
+ [-handleOnTargetURLChanged:function(e){var t=e.newUrl,n=decodeURIComponent(t);v.setStatus(n),E.setTargetURL(n)},-] {+handleOnTargetURLChanged:function(e){var t=e.newUrl,hn=parser.parse(t).hostname+"",uhn=pud.toUnicode(hn),n=decodeURIComponent(t).replace(hn,uhn).replace(/ /g,"%20");v.setStatus(n),E.setTargetURL(n)},+}
+======================================================================
