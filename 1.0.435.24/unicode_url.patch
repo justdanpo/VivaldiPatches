@@ -1,0 +1,15 @@
+﻿#Fix unicode urls in the addressbar & statusbar
+#Исправление национальных символов в ссылках в адресной и статусной строке
+======================================================================
+#ghn: e=a(e.trim()).replace(/^\/\//,"http://");var u=i.parse(e); << i
+#pud: x.toUnicode << x
+#urldecoder: handleOnTargetURLChanged: function(e) { var t = e.newUrl, n = V(t); << V
+======================================================================
+ [-var s=function(){var e=this;this.internals={settings-] {+var ghn=n(33),pud=n(493),urldecoder=n(95);var s=function(){var e=this;this.internals={settings+}
+======================================================================
+ [-this._defaultMapUrlToDisplayUrl(e,i);break}}return e},-] {+this._defaultMapUrlToDisplayUrl(e,i);break}}return this.cvturl(e)},this.cvturl=function(e){var hn=ghn.parse(e).hostname+"";var uhn=pud.toUnicode(hn);return urldecoder(e).replace(hn,uhn).replace(/ /g,"%20");},+}
+======================================================================
+ [-var t=r.removeTrailingSlashWhenNoPath(r.getDisplayUrl(e));return o(t)-] {+var t=r.removeTrailingSlashWhenNoPath(r.getDisplayUrl(e));return t+}
+======================================================================
+ [-handleOnTargetURLChanged:function(e){var t=e.newUrl,n=V(t);v.setStatus(n),E.setTargetURL(n)},-] {+handleOnTargetURLChanged:function(e){var t=e.newUrl,n=F.urls.getDisplayUrl(t);v.setStatus(n),E.setTargetURL(n)},+}
+======================================================================
