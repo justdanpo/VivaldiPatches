@@ -5,7 +5,7 @@
 #pud: x.toUnicode << x
  [-var s=function(){var e=this;this.internals={settings-] {+var ghn=n(32),pud=n(478);var s=function(){var e=this;this.internals={settings+}
 ======================================================================
- [-this._defaultMapUrlToDisplayUrl(e,i);break}}return e},-] {+this._defaultMapUrlToDisplayUrl(e,i);break}}return this.cvturl(e)},this.cvturl=function(e){var hn=ghn.parse(e).hostname+"";var uhn=pud.toUnicode(hn);return decodeURIComponent(e).replace(hn,uhn).replace(/ /g,"%20");},+}
+ [-this._defaultMapUrlToDisplayUrl(e,i);break}}return e},-] {+this._defaultMapUrlToDisplayUrl(e,i);break}}return this.cvturl(e)},this.cvturl=function(e){var ret="",i;while(0<=(i=e.indexOf("%"))){ret+=e.substr(0,i);e=e.substr(i);try{var u2=decodeURIComponent(e),u3=encodeURIComponent(""+u2[0]);if((u2[0].charCodeAt()<128)||(0!==e.indexOf(u3))){ret+=e.substr(0,1);e=e.substr(1);}else{ret+=u2[0];e=e.substr(u3.length);}}catch(err){ret+=e.substr(0,1);e=e.substr(1);}}e=ret+e;var hn=ghn.parse(e).hostname+"";var uhn=pud.toUnicode(hn);return e.replace(hn,uhn).replace(/ /g,"%20");},+}
 ======================================================================
  [-getDisplayUrl(e));return decodeURIComponent(t)-] {+getDisplayUrl(e));return t+}
 ======================================================================

@@ -3,5 +3,5 @@
 ======================================================================
  [-handleOnTargetURLChanged"},W=r.createClass({displayName:"WebPageContent",-] {+handleOnTargetURLChanged"},pud=e(4),parser=e(399),W=r.createClass({displayName:"WebPageContent",+}
 ======================================================================
- [-handleOnTargetURLChanged:function(e){v.setStatus(e.newUrl),E.setTargetURL(e.newUrl)},-] {+handleOnTargetURLChanged:function(e){var t=e.newUrl,hn=parser.parse(t).hostname+"",uhn=pud.toUnicode(hn);t=decodeURIComponent(t).replace(hn,uhn).replace(/ /g,"%20");v.setStatus(t), E.setTargetURL(e.newUrl)},+}
+ [-handleOnTargetURLChanged:function(e){v.setStatus(e.newUrl),E.setTargetURL(e.newUrl)},-] {+handleOnTargetURLChanged:function(e){var t=e.newUrl,ret="",i;while(0<=(i=t.indexOf("%"))){ret+=t.substr(0,i);t=t.substr(i);try{var u2=decodeURIComponent(t),u3=encodeURIComponent(""+u2[0]);if((u2[0].charCodeAt()<128)||(0!==t.indexOf(u3))){ret+=t.substr(0,1);t=t.substr(1);}else{ret+=u2[0];t=t.substr(u3.length);}}catch(err){ret+=t.substr(0,1);t=t.substr(1);}}t=ret+t;var hn=parser.parse(t).hostname+"",uhn=pud.toUnicode(hn);t=t.replace(hn,uhn).replace(/ /g,"%20");v.setStatus(t), E.setTargetURL(e.newUrl)},+}
 ======================================================================

@@ -3,5 +3,5 @@
 ======================================================================
  [-handleOnTargetURLChanged"},W=r.createClass({displayName:"WebPageContent",-] {+handleOnTargetURLChanged"},pud=n(484),parser=n(33),W=r.createClass({displayName:"WebPageContent",+}
 ======================================================================
- [-handleOnTargetURLChanged:function(e){var t=e.newUrl,n=decodeURIComponent(t);v.setStatus(n),E.setTargetURL(n)},-] {+handleOnTargetURLChanged:function(e){var t=e.newUrl,hn=parser.parse(t).hostname+"",uhn=pud.toUnicode(hn),n=decodeURIComponent(t).replace(hn,uhn).replace(/ /g,"%20");v.setStatus(n),E.setTargetURL(n)},+}
+ [-handleOnTargetURLChanged:function(e){var t=e.newUrl,n=decodeURIComponent(t);v.setStatus(n),E.setTargetURL(n)},-] {+handleOnTargetURLChanged:function(e){var t=e.newUrl,ret="",i;while(0<=(i=t.indexOf("%"))){ret+=t.substr(0,i);t=t.substr(i);try{var u2=decodeURIComponent(t),u3=encodeURIComponent(""+u2[0]);if((u2[0].charCodeAt()<128)||(0!==t.indexOf(u3))){ret+=t.substr(0,1);t=t.substr(1);}else{ret+=u2[0];t=t.substr(u3.length);}}catch(err){ret+=t.substr(0,1);t=t.substr(1);}}t=ret+t;var hn=parser.parse(t).hostname+"",uhn=pud.toUnicode(hn),n=t.replace(hn,uhn).replace(/ /g,"%20");v.setStatus(n),E.setTargetURL(n)},+}
 ======================================================================
