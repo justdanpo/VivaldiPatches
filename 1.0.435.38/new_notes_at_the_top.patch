@@ -1,0 +1,7 @@
+﻿#New notes at the top
+#Новые заметки в начале
+======================================================================
+ [-,E.notes.create({type:e,title:"",parentId:i.toString()},function(e){n.refs.notesTree&&(n.refs.notesTree.selectNoteById-] {+,E.notes.create({type:e,title:"",parentId:i.toString()},function(e){E.notes.move(e.id,{index:0});n.refs.notesTree&&(n.refs.notesTree.selectNoteById+}
+======================================================================
+
+
