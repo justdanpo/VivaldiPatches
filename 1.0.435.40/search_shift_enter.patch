@@ -1,0 +1,5 @@
+﻿#Shift+Enter in searchbar opens new tab (search text isn't copied)
+#Shift+Enter в поиске открывает новую вкладку (текст поиска не переносится)
+======================================================================
+ [-this.props.onEnterPressed(e.target.value,t)}else 40-] {+this.props.onEnterPressed(e.target.value,t,{inCurrent:!e.shiftKey})}else 40+}
+======================================================================
