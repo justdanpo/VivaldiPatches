@@ -1,0 +1,7 @@
+﻿#Activate Right of Closed Tab
+#При закрытии вкладки переключаться на правую от закрытой
+======================================================================
+ [-,null,l("Activate Previous in Activation Order"))))-] {+,null,l("Activate Previous in Activation Order")))),r.createElement("div",{className:"setting-single"},r.createElement("label",null,r.createElement(e,{value:"right"}),r.createElement("span",null,l("Activate Right of Closed Tab"))))+}
+======================================================================
+ [-var r;if("keep_relations"===i){for(var o,a=!1,s=e.get("openerTabId"),c=0;c<Se.size;-] {+var r;if("right"===i){var curindex=Se.findIndex(function(e){return e.get("active")}),prev=Se.getIn([curindex-1,"id"]),next=Se.getIn([curindex+1,"id"]);if(next)r=Se.find(function(t){return next==t.get("id")});if(!r&&prev)r=Se.find(function(e){return prev==e.get("id")})}if("keep_relations"===i){for(var o,a=!1,s=e.get("openerTabId"),c=0;c<Se.size;+}
+======================================================================
