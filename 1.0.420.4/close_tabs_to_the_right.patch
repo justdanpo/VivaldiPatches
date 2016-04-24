@@ -1,0 +1,15 @@
+﻿#Close tabs to the right
+#Закрыть вкладки справа от выбранной
+======================================================================
+ [-closeOther:function(e){r.handleViewAction({actionType:o.PAGE_CLOSE_OTHER,page:e})},-] {+closeOther:function(e){r.handleViewAction({actionType:o.PAGE_CLOSE_OTHER,page:e})},closeRight:function(e){r.handleViewAction({actionType:o.PAGE_CLOSE_RIGHT,page:e})},+}
+======================================================================
+ [-PAGE_CLOSE_OTHER:null,-] {+PAGE_CLOSE_OTHER:null,PAGE_CLOSE_RIGHT:null,+}
+======================================================================
+ [-closeAllButTab:function(e){A.clearSelection(),A.closeOther(e)},-] {+closeAllButTab:function(e){A.clearSelection(),A.closeOther(e)},closeAllRight:function(e){A.clearSelection(),A.closeRight(e)},+}
+======================================================================
+ [-case z.PAGE_CLOSE_OTHER:O(t.page);break;-] {+case z.PAGE_CLOSE_OTHER:O(t.page);break;case z.PAGE_CLOSE_RIGHT:closeAllRight(t.page);break;+}
+======================================================================
+ [-{name:I("Close Other Tabs"),handler:this.closeAllButTab.bind(this,e)},-] {+{name:I("Close Other Tabs"),handler:this.closeAllButTab.bind(this,e)},{name:I("Close Tabs to the Right"),handler:this.closeAllRight.bind(this,e)},+}
+======================================================================
+ [-function O(e){J.get("CLOSABLE_PINNED_TABS",function(t){Ae=Ae.map(function(n){return n.set("isRemoved",(n.get("pinned")!==!0||n.get("pinned")===!0&&"on"===t)&&n.get("id")!==e.get("id"))}),ge.emitChange()})}-] {+function O(e){J.get("CLOSABLE_PINNED_TABS",function(t){Ae=Ae.map(function(n){return n.set("isRemoved",(n.get("pinned")!==!0||n.get("pinned")===!0&&"on"===t)&&n.get("id")!==e.get("id"))}),ge.emitChange()})}function closeAllRight(e){var curidx=e.get("index");J.get("CLOSABLE_PINNED_TABS",function(t){Ae=Ae.map(function(n){return n.set("isRemoved",((n.get("pinned")!==!0)||"on"==t)&&n.get("index")>curidx)});ge.emitChange()})}+}
+======================================================================
