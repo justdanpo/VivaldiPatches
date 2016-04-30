@@ -1,0 +1,5 @@
+﻿#MiddleClick on Reload Tab button to clone
+#Клик средней кнопкой мыши по кнопке "обновить" клонирует вкладку
+======================================================================
+ [-doActionReload:function(e){this.state.navigationInfo&&(this.state.navigationInfo.get("isLoading")?R.stop():R.reload(),this.updateFocus(this.props.page))},doActionHome:function(e){S.showHomepage()}-] {+doActionReload:function(e){if(e.button==1){S.clonePage(this.props.page);return}this.state.navigationInfo&&(this.state.navigationInfo.get("isLoading")?R.stop():R.reload(),this.updateFocus(this.props.page))},doActionHome:function(e){S.showHomepage()}+}
+======================================================================
