@@ -1,0 +1,11 @@
+﻿#Shift+Enter in AddressBar opens a new tab
+#Shift+Enter в адресной строке открывает новую вкладку
+======================================================================
+ [-urlFieldGo:function(e){-] {+shiftPressed:false,onkey:function(e){this.shiftPressed=e.shiftKey},urlFieldGo:function(e){+}
+======================================================================
+ [-(i=z.format(a))}k.go(i,{enableSearch:!0,addTypedHistory:!0,addTypedSearchHistory:!1})}-] {+(i=z.format(a))}k.go(i,{enableSearch:!0,addTypedHistory:!0,addTypedSearchHistory:!1,inCurrent:!t.shiftPressed});t.shiftPressed&&t.refs.urlField.revertUrl()}+}
+======================================================================
+ [-,r.createElement("form",{onSubmit:this.urlFieldGo-] {+,r.createElement("form",{onKeyUp:this.onkey,onKeyDown:this.onkey,onSubmit:this.urlFieldGo+}
+======================================================================
+ [-===C(k(i.value)))&&(e.preventDefault(),p.go(this._completedItem.url)-] {+===C(k(i.value)))&&(e.preventDefault(),p.go(this._completedItem.url,{inCurrent:!e.shiftKey}),e.shiftKey&&this.revertUrl()+}
+======================================================================
