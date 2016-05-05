@@ -1,5 +1,5 @@
 ﻿#Don't show Popup Thumbnail for active tab
 #Не показывать всплывающие эскизы для активной вкладки
 ======================================================================
- [-o.createElement(h,{key:e,id:t.get("id"),disabled:!this.props.USE_TOOLTIP||this.state.isPressed,-] {+o.createElement(h,{key:e,id:t.get("id"),disabled:!this.props.USE_TOOLTIP||this.state.isPressed||t.get("active"),+}
+ [-o.createElement(h,{key:e,id:t.get("id"),disabled:!this.props.USE_TOOLTIP||this.state.isPressed,-] {+o.createElement(h,{key:e,id:t.get("id"),disabled:!this.props.USE_TOOLTIP||this.state.isPressed||(t.get("active")&&!t.getIn(["extData","group"])),+}
 ======================================================================
