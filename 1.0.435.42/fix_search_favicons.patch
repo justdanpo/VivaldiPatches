@@ -1,0 +1,15 @@
+﻿#Fix Search Engines favicons
+#Исправление иконок поисковиков
+======================================================================
+#ghn: e=a(e.trim()).replace(/^\/\//,"http://");var u=i.parse(e); << i
+======================================================================
+ [-,p=r.createClass({displayName:"SearchEngines",-] {+,ghn=n(39),p=r.createClass({displayName:"SearchEngines",+}
+======================================================================
+ [-var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=t.FaviconUrl?t.FaviconUrl:"chrome://favicon/"+t.Url,r.createElement("li",{className:"controls",key:t.Id,onDoubleClick:e.onSearchEngineSelected-] {+var loc=ghn.parse(t.Url),full=loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=t.FaviconUrl?t.FaviconUrl:"chrome://favicon/"+full,r.createElement("li",{className:"controls",key:t.Id,onDoubleClick:e.onSearchEngineSelected+}
+======================================================================
+ [-,l=i.createClass({displayName:"VivaldiDropdown",-] {+,ghn=n(39),l=i.createClass({displayName:"VivaldiDropdown",+}
+======================================================================
+ [-renderDropdown:function(){var e=this.props.store.map(function(e){return{-] {+renderDropdown:function(){var e=this.props.store.map(function(e){var loc=ghn.parse(e.Url),full=loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');return{+}
+======================================================================
+ [-name:e.Name,icon:e.Image||e.FaviconUrl,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(r,{items-] {+name:e.Name,icon:e.Image||e.FaviconUrl||"chrome://favicon/"+full,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(r,{items+}
+======================================================================

@@ -1,0 +1,13 @@
+﻿#Fix Search Engines favicons
+#Исправление иконок поисковиков
+======================================================================
+#ghn: e=a(e.trim()).replace(/^\/\//,"http://");var u=i.parse(e); << i
+======================================================================
+ [-,h=r.createClass({displayName:"SearchEngines",-] {+,ghn=n(29),h=r.createClass({displayName:"SearchEngines",+}
+======================================================================
+ [-renderList:function(){var e=this;return this.state.SEARCH_ENGINES.map(function(t){var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=t.FaviconUrl?t.FaviconUrl:"chrome://favicon/"+t.Url,-] {+renderList:function(){var e=this;return this.state.SEARCH_ENGINES.map(function(t){var loc=ghn.parse(t.Url),full=loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=t.FaviconUrl?t.FaviconUrl:"chrome://favicon/"+full,+}
+======================================================================
+ [-,I=i.createClass({displayName:"SearchField",-] {+,ghn=n(29),I=i.createClass({displayName:"SearchField",+}
+======================================================================
+ [-var n=t.map(function(e){return{name:e.Name,icon:e.Image||e.FaviconUrl,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(f,{ref:"searchEngines",-] {+var n=t.map(function(e){var loc=ghn.parse(e.Url),full=loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');return{name:e.Name,icon:e.Image||e.FaviconUrl||"chrome://favicon/"+full,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(f,{ref:"searchEngines",+}
+======================================================================
