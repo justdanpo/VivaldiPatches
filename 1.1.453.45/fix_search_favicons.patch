@@ -11,3 +11,7 @@
 ======================================================================
  [-var e=this.props.store.map(function(e){return{name:e.Name,icon:e.Image||e.FaviconUrl,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(r,{items-] {+var e=this.props.store.map(function(e){var loc=ghn.parse(e.Url),full=loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');return{name:e.Name,icon:e.Image||e.FaviconUrl||"chrome://favicon/"+full,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(r,{items+}
 ======================================================================
+ [-return r.createElement(d,{focusName:"focus_addressbar",className:V(e),-] {+var full;if(i&&!i.Image){var loc=z.parse(i.Url);full="chrome://favicon/"+loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');}return r.createElement(d,{focusName:"focus_addressbar",className:V(e),+}
+======================================================================
+ [-?r.createElement("img",{className:"searchengine-icon",src:i.Image}-] {+?r.createElement("img",{className:"searchengine-icon",src:i.Image||full}+}
+======================================================================
