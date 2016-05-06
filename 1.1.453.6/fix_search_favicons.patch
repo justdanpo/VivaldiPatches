@@ -15,3 +15,7 @@
 ======================================================================
  [-?r.createElement("img",{className:"searchengine-icon",src:i.Image}-] {+?r.createElement("img",{className:"searchengine-icon",src:i.Image||full}+}
 ======================================================================
+ [-,A=i.createClass({displayName:"OmniDropdown",-] {+,ghn=n(27),A=i.createClass({displayName:"OmniDropdown",+}
+======================================================================
+ [-return i.createElement("section",{className:"filter-search ignore-react-onclickoutside"},i.createElement("label",null,s("Search $1",[e])),i.createElement("div",{onClick:this.onSearchClicked,className:"search omni-clickable","data-url":this.props.pattern},i.createElement("img",{className:"favicon",src:(this.props.typedSearchEngine||this.props.defaultSearchEngine).Image}-] {+var eng=(this.props.typedSearchEngine || this.props.defaultSearchEngine);var full=eng.Image;if(!full){var loc=ghn.parse(eng.Url);full="chrome://favicon/"+loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');}return i.createElement("section",{className:"filter-search ignore-react-onclickoutside"},i.createElement("label",null,s("Search $1",[e])),i.createElement("div",{onClick:this.onSearchClicked,className:"search omni-clickable","data-url":this.props.pattern},i.createElement("img",{className:"favicon",src:full}+}
+======================================================================
