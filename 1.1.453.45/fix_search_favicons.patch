@@ -1,21 +1,27 @@
 ﻿#Fix Search Engines favicons
 #Исправление иконок поисковиков
 ======================================================================
-#ghn: e=a(e.trim()).replace(/^\/\//,"http://");var u=i.parse(e); << i
+#ghn - n(27): e=a(e.trim()).replace(/^\/\//,"http://");var u=i.parse(e); << i
+#n(12) - obj.findDOMNode
 ======================================================================
- [-,p=r.createClass({displayName:"SearchEngines",-] {+,ghn=n(27),p=r.createClass({displayName:"SearchEngines",+}
+#common code
+#objname.getFavicon(defaulImage,url)
+ [-,f={findDOMNode:d,render:p,-] {+,f={getFavicon:function(defaultimage,url){if(defaultimage)return defaultimage;if(!url)return url;var loc=n(27).parse(url);return "chrome://favicon/"+loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');},findDOMNode:d,render:p,+}
 ======================================================================
- [-renderList:function(){var e=this;return this.state.SEARCH_ENGINES.map(function(t){var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=t.FaviconUrl?t.FaviconUrl:"chrome://favicon/"+t.Url,-] {+renderList:function(){var e=this;return this.state.SEARCH_ENGINES.map(function(t){var loc=ghn.parse(t.Url),full=loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=t.FaviconUrl?t.FaviconUrl:"chrome://favicon/"+full,+}
+#Settings
+ [-,p=r.createClass({displayName:"SearchEngines",-] {+,gfi=n(12),p=r.createClass({displayName:"SearchEngines",+}
+ [-var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=t.FaviconUrl?t.FaviconUrl:"chrome://favicon/"+t.Url,r.createElement("li",{className:"controls",-] {+var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=gfi.getFavicon(t.FaviconUrl,t.Url),r.createElement("li",{className:"controls",+}
 ======================================================================
- [-,l=i.createClass({displayName:"VivaldiDropdown",-] {+,ghn=n(27),l=i.createClass({displayName:"VivaldiDropdown",+}
+#UrlBar - search engines nicknames
+ [-,ie=r.createClass({displayName:"UrlBar",-] {+,gfi=n(12),ie=r.createClass({displayName:"UrlBar",+}
+ [-?r.createElement("img",{className:"searchengine-icon",src:i.Image}-] {+?r.createElement("img",{className:"searchengine-icon",src:gfi.getFavicon(i.Image,i.Url)}+}
 ======================================================================
- [-var e=this.props.store.map(function(e){return{name:e.Name,icon:e.Image||e.FaviconUrl,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(r,{items-] {+var e=this.props.store.map(function(e){var loc=ghn.parse(e.Url),full=loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');return{name:e.Name,icon:e.Image||e.FaviconUrl||"chrome://favicon/"+full,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(r,{items+}
+#Search dropdown
+ [-,l=i.createClass({displayName:"VivaldiDropdown",-] {+,gfi=n(12),l=i.createClass({displayName:"VivaldiDropdown",+}
+ [-var e=this.props.store.map(function(e){return{name:e.Name,icon:e.Image||e.FaviconUrl,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(r,-] {+var e=this.props.store.map(function(e){return{name:e.Name,icon:e.Image||e.FaviconUrl||gfi.getFavicon(!1,e.Url),shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(r,+}
 ======================================================================
- [-return r.createElement(d,{focusName:"focus_addressbar",className:V(e),-] {+var full;if(i&&!i.Image){var loc=z.parse(i.Url);full="chrome://favicon/"+loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');}return r.createElement(d,{focusName:"focus_addressbar",className:V(e),+}
-======================================================================
- [-?r.createElement("img",{className:"searchengine-icon",src:i.Image}-] {+?r.createElement("img",{className:"searchengine-icon",src:i.Image||full}+}
-======================================================================
- [-,A=i.createClass({displayName:"OmniDropdown",-] {+,ghn=n(27),A=i.createClass({displayName:"OmniDropdown",+}
-======================================================================
- [-return i.createElement("section",{className:"filter-search ignore-react-onclickoutside"},i.createElement("label",null,s("Search $1",[e])),i.createElement("div",{onClick:this.onSearchClicked,className:"search omni-clickable","data-url":this.props.pattern},i.createElement("img",{className:"favicon",src:(this.props.typedSearchEngine||this.props.defaultSearchEngine).Image}-] {+var eng=(this.props.typedSearchEngine || this.props.defaultSearchEngine);var full=eng.Image;if(!full){var loc=ghn.parse(eng.Url);full="chrome://favicon/"+loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');}return i.createElement("section",{className:"filter-search ignore-react-onclickoutside"},i.createElement("label",null,s("Search $1",[e])),i.createElement("div",{onClick:this.onSearchClicked,className:"search omni-clickable","data-url":this.props.pattern},i.createElement("img",{className:"favicon",src:full}+}
+#AddressBar dropdown
+ [-,A=i.createClass({displayName:"OmniDropdown",-] {+,gfi=n(12),A=i.createClass({displayName:"OmniDropdown",+}
+ [-onClick:this.onLinkItemClicked.bind(this,e)},!n&&e.url&&i.createElement("img",{className:"favicon",src:"chrome://favicon/"+e.url}),n&&(!this.props.typedSearchEngine&&i.createElement("img",{className:"favicon",src:this.props.defaultSearchEngine.Image})||i.createElement("img",{className:"favicon",src:this.props.typedSearchEngine.Image}-] {+onClick:this.onLinkItemClicked.bind(this,e)},!n&&e.url&&i.createElement("img",{className:"favicon",src:gfi.getFavicon(!1,e.url)}),n&&(!this.props.typedSearchEngine&&i.createElement("img",{className:"favicon",src:gfi.getFavicon(this.props.defaultSearchEngine.Image,this.props.defaultSearchEngine.Url)})||i.createElement("img",{className:"favicon",src:gfi.getFavicon(this.props.typedSearchEngine.Image,this.props.typedSearchEngine.Url)}+}
+ [-,i.createElement("img",{className:"favicon",src:(this.props.typedSearchEngine||this.props.defaultSearchEngine).Image})-] {+,i.createElement("img",{className:"favicon",src:gfi.getFavicon((this.props.typedSearchEngine||this.props.defaultSearchEngine).Image,(this.props.typedSearchEngine||this.props.defaultSearchEngine).Url)})+}
 ======================================================================
