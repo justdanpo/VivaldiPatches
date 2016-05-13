@@ -1,0 +1,15 @@
+﻿#Close tabs to the right
+#Закрыть вкладки справа от выбранной
+======================================================================
+ [-closeOther:function(e,t){i.handleViewAction({actionType:r.PAGE_CLOSE_OTHER,page:e,includeGroup:t})},-] {+closeOther:function(e,t){i.handleViewAction({actionType:r.PAGE_CLOSE_OTHER,page:e,includeGroup:t})},closeRight:function(e,t){i.handleViewAction({actionType:r.PAGE_CLOSE_RIGHT,page:e,includeGroup:t})},+}
+======================================================================
+ [-PAGE_CLOSE_OTHER:null,-] {+PAGE_CLOSE_OTHER:null,PAGE_CLOSE_RIGHT:null,+}
+======================================================================
+ [-closeAllButTab:function(e,t){var n=!t;A.closeOther(e,n)},-] {+closeAllButTab:function(e,t){var n=!t;A.closeOther(e,n)},closeAllRight:function(e,t){var n=!t;A.closeRight(e,n)},+}
+======================================================================
+ [-case oe.PAGE_CLOSE_OTHER:k(t.page,t.includeGroup);break;-] {+case oe.PAGE_CLOSE_OTHER:k(t.page,t.includeGroup);break;case oe.PAGE_CLOSE_RIGHT:closeAllRight(t.page,t.includeGroup);break;+}
+======================================================================
+ [-{name:M("Close Other Tabs"),handler:this.closeAllButTab.bind(this,e,l),visible:E},-] {+{name:M("Close Other Tabs"),handler:this.closeAllButTab.bind(this,e,l),visible:E},{name:M("Close Tabs to the Right"),handler:this.closeAllRight.bind(this,e,l),visible:E},+}
+======================================================================
+ [-function k(e,t){var n=t&&Pe.isGroup(e.getIn(["extData","group"])),i=ae.getSync("CLOSABLE_PINNED_TABS");Te=Te.map(function(t){var r=void 0;return r=t.get("id")!==e.get("id"),n&&t.getIn(["extData","group"])===e.getIn(["extData","group"])&&(r=!1),(t.get("pinned")===!0||t.get("pinned")===!0&&"on"===i)&&(r=!1),t.set("isRemoved",r)}),Pe.emitChange()}-] {+function k(e,t){var n=t&&Pe.isGroup(e.getIn(["extData","group"])),i=ae.getSync("CLOSABLE_PINNED_TABS");Te=Te.map(function(t){var r=void 0;return r=t.get("id")!==e.get("id"),n&&t.getIn(["extData","group"])===e.getIn(["extData","group"])&&(r=!1),(t.get("pinned")===!0||t.get("pinned")===!0&&"on"===i)&&(r=!1),t.set("isRemoved",r)}),Pe.emitChange()}function closeAllRight(e,t){var curidx=e.get("index");var n=t&&Pe.isGroup(e.getIn(["extData","group"])),i=ae.getSync("CLOSABLE_PINNED_TABS");Te=Te.map(function(t){var r=void 0;return r=t.get("index")>curidx,n&&t.getIn(["extData","group"])===e.getIn(["extData","group"])&&(r=!1),(t.get("pinned")===!0||t.get("pinned")===!0&&"on"===i)&&(r=!1),t.set("isRemoved",r)}),Pe.emitChange()}+}
+======================================================================
