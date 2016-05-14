@@ -1,5 +1,5 @@
 ﻿#New notes at the top
 #Новые заметки в начале
 ======================================================================
- [-A.notes.create({parentId:e.parentId.toString(),attachments:e.attachments,content:e.content,title:e.title,type:t.isFolder(e)?"folder":"note"},function(i){if(t.hasChildren(e)){-] {+A.notes.create({parentId:e.parentId.toString(),attachments:e.attachments,content:e.content,title:e.title,type:t.isFolder(e)?"folder":"note"},function(i){A.notes.move(i.id,{index:0});if(t.hasChildren(e)){+}
+ [-{A.notes.create({parentId:e.parentId.toString(),attachments:e.attachments,content:e.content,title:e.title,type:t.isFolder(e)?"folder":"note"},function(i){if(t.hasChildren(e)){-] {+{A.notes.create({parentId:e.parentId.toString(),attachments:e.attachments,content:e.content,title:e.title,type:t.isFolder(e)?"folder":"note"},function(i){A.notes.move(i.id,{index:0});if(t.hasChildren(e)){+}
 ======================================================================
