@@ -1,0 +1,15 @@
+﻿#Show progressbar on open url with no delay. V2. Removes a delay when a page is opened from a browser's internal page (such as Speed Dial).
+#Показ прогрессбара при открытии ссылки без задержек. V2. Удаляет задержку при открытии ссылки из внутренних страниц браузера (например из Экспресс Панели).
+======================================================================
+ [-,d=i.createClass({displayName:"PageloadProgress",-] {+,isint=n(18).urls,d=i.createClass({displayName:"PageloadProgress",+}
+======================================================================
+ [-,i=o.getNavigationInfo(e).get("trigger"),r=t.get("loadedBytes"),a=t.get("loadedElements"),s=t.get("totalElements");"start"===i?this.setState(Object.assign({},u,{currentPageId:e.get("id"),isStarted:!0,isProgressing:!0,progress:.1})):"stop"===i?this.setState({isProgressing:!1,progress:1}):"commit"===i&&(this.setState({progress:n,elLoaded:a,elTotal:s,bytes:r,isStarted:!0}-] {+,i=o.getNavigationInfo(e).get("trigger"),r=t.get("loadedBytes"),a=t.get("loadedElements"),s=t.get("totalElements");var isinternal=isint.isInternalUrl(o.getNavigationInfo(e).get("loadingUrl"));"start"===i?this.setState(Object.assign({},u,{currentPageId:e.get("id"),isStarted:!isinternal,isProgressing:!isinternal,progress:.1})):"stop"===i?this.setState({isProgressing:!1,progress:1}):"commit"===i&&(this.setState({progress:n,elLoaded:a,elTotal:s,bytes:r,isStarted:!isinternal}+}
+======================================================================
+ [-,s=i.createClass({displayName:"TabProgressIndicator",-] {+,isint=n(18).urls,s=i.createClass({displayName:"TabProgressIndicator",+}
+======================================================================
+ [-,n=o.getNavigationInfo(e).get("trigger");"start"===n?this.setState({isProgressing:!1,progress:0}):"stop"===n?this.setState({isProgressing:!1,progress:1}):"commit"!==n&&"content"!==n||this.setState({isProgressing:!0,progress:t}-] {+,n=o.getNavigationInfo(e).get("trigger");var isinternal=isint.isInternalUrl(o.getNavigationInfo(e).get("loadingUrl"));"start"===n?this.setState({isProgressing:!isinternal,progress:.1}):"stop"===n?this.setState({isProgressing:!1,progress:1}):"commit"!==n&&"content"!==n||this.setState({isProgressing:!isinternal,progress:t}+}
+======================================================================
+ [-createElement(b,{page:this.state.page,ref:"webpageview_loadprogress",open:!u}-] {+createElement(b,{page:this.state.page,ref:"webpageview_loadprogress",open:!0}+}
+======================================================================
+ [-updateNavigationState:function(e,t,n){var i=U.isNavigatablePage(this.props.page),r=d.Map({canNavigate:i,canGoBack:i&&this.webview.canGoBack(),canGoForward:this.webview.canGoForward(),isLoading:t,trigger:n});-] {+updateNavigationState:function(e,t,n){var i=U.isNavigatablePage(this.props.page),r=d.Map({canNavigate:i,canGoBack:i&&this.webview.canGoBack(),canGoForward:this.webview.canGoForward(),isLoading:t,loadingUrl:e,trigger:n});+}
+======================================================================
