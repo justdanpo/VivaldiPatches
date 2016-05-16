@@ -1,0 +1,7 @@
+﻿#GO button
+#Кнопка перехода по ссылке из адресной строки
+======================================================================
+ [-,toggleShowTypedHistory:-] {+,urlFieldGoMC:function(e){if(e.button===1)e.altKey=!0;this.urlFieldGo(e)},toggleShowTypedHistory:+}
+======================================================================
+ [-isSearchOn:this.state.SEARCH_FIELD_ENABLED,thumbnail:this.state.page.getIn(["extData","thumbnail"])})),this.state.SEARCH_FIELD_ENABLED&&r.createElement(I,{ref:"search",page:this.state.page,value:this.state.searchText,-] {+isSearchOn:this.state.SEARCH_FIELD_ENABLED,thumbnail:this.state.page.getIn(["extData","thumbnail"])})),r.createElement("button",{className:"buttonGo",ref:"webpageview_nav_go",onClick:this.urlFieldGoMC,style:{border:0,"padding-left":0,background:"transparent"}},r.createElement("svg",{width:"26",height:"26",viewBox:"0 0 26 26",},r.createElement("path",{d:"M 12,4 10.400391,5.5996094 16.5,11.869141 l -13.5,0 0,2.261718 13.5,0 -6.099609,6.269532 L 12,22 21,13 12,4 Z"}))),this.state.SEARCH_FIELD_ENABLED&&r.createElement(I,{ref:"search",page:this.state.page,value:this.state.searchText,+}
+======================================================================
