@@ -2,5 +2,5 @@
 #Клик средней кнопкой мыши по кнопке "[+]" открывает ссылку из буфера
 ======================================================================
 #n(70) - obj.goSearchURL
- [-createTab:function(e){e&&e.stopPropagation(),m.openURL()}-] {+createTab:function(e){e&&e.stopPropagation();if(1===e.button){var txt,t=function(t){t.clipboardData.types.indexOf("text/plain")>-1&&(txt=t.clipboardData.getData("text/plain"),t.preventDefault())};document.addEventListener("paste",t),document.execCommand("paste"),document.removeEventListener("paste",t);n(70).go(txt,{inCurrent:!1,addTypedHistory:!0,addTypedSearchHistory:!1,enableSearch:!0});}else m.openURL()}+}
+ [-createTab:function(e){e&&e.stopPropagation(),m.openURL()}-] {+createTab:function(e){e&&e.stopPropagation();if(e&&1===e.button){var txt,t=function(t){t.clipboardData.types.indexOf("text/plain")>-1&&(txt=t.clipboardData.getData("text/plain"),t.preventDefault())};document.addEventListener("paste",t),document.execCommand("paste"),document.removeEventListener("paste",t);n(70).go(txt,{inCurrent:!1,addTypedHistory:!0,addTypedSearchHistory:!1,enableSearch:!0});}else m.openURL()}+}
 ======================================================================
