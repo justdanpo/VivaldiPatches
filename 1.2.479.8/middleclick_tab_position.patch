@@ -1,7 +1,7 @@
 ﻿#Settings: Middleclicked URL Tab Position
 #Настройки: Позиция вкладки, открываемой по средней кнопке мыши
 ======================================================================
- [-t.addOpenerTabId===!0&&(u.openerTabId=n.get("id")),A.tabs.create(u,function(n){-] {+t.addOpenerTabId===!0&&(u.openerTabId=n.get("id")),u.index=0,s.setmcurls(l),A.tabs.create(u,function(n){+}
+ [-t.addOpenerTabId===!0&&(u.openerTabId=n.get("id")),A.tabs.create(u,function(n){-] {+t.addOpenerTabId===!0&&(u.openerTabId=n.get("id")),s.setmcurls(l),A.tabs.create(u,function(n){+}
 ======================================================================
  [-function A(e,t){var n=e.get("index"),o=ae.getSync("TAB_NEW_PLACEMENT");if(r(e))i(e,!1),n=e.get("index");else if("directrightofcurrent"===o)-] {+var mcurls=[];function A(e,t){var found=mcurls.indexOf(e.get("url"));if(found>-1)mcurls.splice(found,1);var n=e.get("index"),o=ae.getSync("TAB_NEW_PLACEMENT");if(r(e))i(e,!1),n=e.get("index");else if(found<0&&(function(){o=ae.getSync("TAB_MIDDLECLICK_PLACEMENT")})()&&!1);else if("directrightofcurrent"===o)+}
 ======================================================================
