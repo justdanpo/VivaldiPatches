@@ -1,0 +1,16 @@
+﻿#Settings: Middleclicked URL Tab Position
+#Настройки: Позиция вкладки, открываемой по средней кнопке мыши
+======================================================================
+ [-t.addOpenerTabId===!0&&(A.openerTabId=n.get("id")),c.tabs.create(A,function(n){-] {+t.addOpenerTabId===!0&&(A.openerTabId=n.get("id")),s.setmcurls(l),c.tabs.create(A,function(n){+}
+======================================================================
+ [-function A(e,t){var n=e.get("index"),o=le.getSync("TAB_NEW_PLACEMENT");if(r(e))i(e,!1),n=e.get("index");else if("directrightofcurrent"===o)-] {+var mcurls=[];function A(e,t){var found=mcurls.indexOf(e.get("url"));if(found>-1)mcurls.splice(found,1);var n=e.get("index"),o=le.getSync("TAB_NEW_PLACEMENT");if(r(e))i(e,!1),n=e.get("index");else if(found<0&&(function(){o=le.getSync("TAB_MIDDLECLICK_PLACEMENT")})()&&!1);else if("directrightofcurrent"===o)+}
+======================================================================
+ [-},getDefaultStartpage:function(){-] {+},setmcurls:function(e){mcurls.push(e)},getDefaultStartpage:function(){+}
+======================================================================
+ [-vivaldiSettingsKeys:["TAB_NEW_PLACEMENT","TAB_CLONE_PLACEMENT"]-] {+vivaldiSettingsKeys:["TAB_NEW_PLACEMENT","TAB_MIDDLECLICK_PLACEMENT","TAB_CLONE_PLACEMENT"]+}
+======================================================================
+#o:TabOpen:n(RadioGroup)
+ [-,r.createElement("span",null,l("As Last Tab"))))))),r.createElement("div",{className:"setting-group"},r.createElement("div",{className:"setting-single"},r.createElement("h3",null,l("Clone Tab Position")),-] {+,r.createElement("span",null,l("As Last Tab"))))))),r.createElement("div",{className:"setting-group"},r.createElement("div",{className:"setting-single"},r.createElement("h3",null,l("Middleclicked URL Tab Position")),r.createElement(o,{name:"tabMiddleclickOpen",value:this.state.TAB_MIDDLECLICK_PLACEMENT,onChange:this.saveVivaldiSettingFromEvent.bind(this,"TAB_MIDDLECLICK_PLACEMENT","value")},r.createElement("div",{className:"setting-single"},r.createElement("label",null,r.createElement("input",{type:"radio",value:"rightofcurrent"}),r.createElement("span",null,l("After Related Tabs")))),r.createElement("div",{className:"setting-single"},r.createElement("label",null,r.createElement("input",{type:"radio",value:"directrightofcurrent"}),r.createElement("span",null,l("After Active Tab")))),r.createElement("div",{className:"setting-single"},r.createElement("label",null,r.createElement("input",{type:"radio",value:"alwayslast"}),r.createElement("span",null,l("As Last Tab"))))))),r.createElement("div",{className:"setting-group"},r.createElement("div",{className:"setting-single"},r.createElement("h3",null,l("Clone Tab Position")),+}
+======================================================================
+ [-TAB_NEW_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",-] {+TAB_NEW_PLACEMENT:"alwayslast",TAB_MIDDLECLICK_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",+}
+======================================================================
