@@ -1,8 +1,8 @@
 ﻿#Fix Search Engines favicons
 #Исправление иконок поисковиков
 ======================================================================
-#n(29): url
-#n(13): react_ReactDOM
+#n(29):url
+#n(13):react_ReactDOM_wrapper
 ======================================================================
 #common code
 #objname.getFavicon(defaulImage,url)
