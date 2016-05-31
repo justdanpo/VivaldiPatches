@@ -1,0 +1,27 @@
+﻿#Fix Search Engines favicons
+#Исправление иконок поисковиков
+======================================================================
+#n(29):url
+#n(13):react_ReactDOM_wrapper
+======================================================================
+#common code
+#objname.getFavicon(defaulImage,url)
+ [-,p={findDOMNode:c,render:h,-] {+,p={getFavicon:function(defaultimage,url){if(defaultimage)return defaultimage;if(!url)return url;var loc=n(29).parse(url);return "chrome://favicon/"+loc.protocol+'//'+loc.hostname+(loc.port?':'+loc.port:'');},findDOMNode:c,render:h,+}
+======================================================================
+#Settings
+ [-,h=r.createClass({displayName:"SearchEngines",-] {+,gfi=n(13),h=r.createClass({displayName:"SearchEngines",+}
+ [-var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=t.FaviconUrl?t.FaviconUrl:"chrome://favicon/"+t.Url,r.createElement("li",{className:"controls",-] {+var n=t.Id===parseInt(e.state.DEFAULT_SEARCH_ENGINE),i="/resources/page-web@2x.png";return i=gfi.getFavicon(t.FaviconUrl,t.Url),r.createElement("li",{className:"controls",+}
+======================================================================
+#UrlBar - search engines nicknames
+ [-,se=r.createClass({displayName:"UrlBar",-] {+,gfi=n(13),se=r.createClass({displayName:"UrlBar",+}
+ [-?r.createElement("img",{className:"searchengine-icon",src:i.Image}-] {+?r.createElement("img",{className:"searchengine-icon",src:gfi.getFavicon(i.Image,i.Url)}+}
+======================================================================
+#Search dropdown
+ [-,T=i.createClass({displayName:"SearchField",-] {+,gfi=n(13),T=i.createClass({displayName:"SearchField",+}
+ [-var n=t.map(function(e){return{name:e.Name,icon:e.Image||e.FaviconUrl,shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(f,{ref:"searchEngines",-] {+var n=t.map(function(e){return{name:e.Name,icon:e.Image||e.FaviconUrl||gfi.getFavicon(!1,e.Url),shortcut:e.Keyword,noPrettifying:!0,Id:e.Id}});return i.createElement(f,{ref:"searchEngines",+}
+======================================================================
+#AddressBar dropdown
+ [-,h=i.createClass({displayName:"OmniDropdown",-] {+,gfi=n(13),h=i.createClass({displayName:"OmniDropdown",+}
+ [-onClick:this.onLinkItemClicked.bind(this,e)},!n&&e.url&&i.createElement("img",{className:"favicon",src:"chrome://favicon/"+e.url}),n&&(!this.props.typedSearchEngine&&i.createElement("img",{className:"favicon",src:this.props.defaultSearchEngine.Image})||i.createElement("img",{className:"favicon",src:this.props.typedSearchEngine.Image}-] {+onClick:this.onLinkItemClicked.bind(this,e)},!n&&e.url&&i.createElement("img",{className:"favicon",src:gfi.getFavicon(!1,e.url)}),n&&(!this.props.typedSearchEngine&&i.createElement("img",{className:"favicon",src:gfi.getFavicon(this.props.defaultSearchEngine.Image,this.props.defaultSearchEngine.Url)})||i.createElement("img",{className:"favicon",src:gfi.getFavicon(this.props.typedSearchEngine.Image,this.props.typedSearchEngine.Url)}+}
+ [-,i.createElement("img",{className:"favicon",src:(this.props.typedSearchEngine||this.props.defaultSearchEngine).Image})-] {+,i.createElement("img",{className:"favicon",src:gfi.getFavicon((this.props.typedSearchEngine||this.props.defaultSearchEngine).Image,(this.props.typedSearchEngine||this.props.defaultSearchEngine).Url)})+}
+======================================================================

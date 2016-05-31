@@ -1,0 +1,7 @@
+﻿#Create tab with middle click on a free tabbar space
+#Создание вкладки кликом колесом по свободной области панели вкладок
+======================================================================
+ [-onResize},r.createElement(s,{ref:"tabStrip"-] {+onResize},r.createElement("div",{className:"tab-spacer",style:{top:0,left:0,height:"100%",width:"100%",position:"absolute","-webkit-app-region":"no-drag"},onDoubleClick:function(e){if(1===e.button){e.preventDefault(),e.stopPropagation()}}}),r.createElement(s,{ref:"tabStrip"+}
+======================================================================
+ [-,r.createElement("button",{ref:"newTabButton",className:"button-tabbar newtab",-] {+,r.createElement("button",{ref:"newTabButton",style:{zIndex:1},className:"button-tabbar newtab",+}
+======================================================================

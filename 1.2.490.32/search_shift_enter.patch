@@ -1,0 +1,5 @@
+﻿#Shift+Enter in searchbar opens new tab (search text isn't copied)
+#Shift+Enter в поиске открывает новую вкладку (текст поиска не переносится)
+======================================================================
+ [-_search:function(e){C.cancel&&C.cancel(),b=[];var t=this.props.currentSearchEngine&&this.props.currentSearchEngine.Url;if(l.setState(this.props.page,{editText:e.value}),!t){var n=this._getDefaultSearchEngine();t=n.Url}e.value&&e.value.length>0&&this.props.onEnterPressed(e.value,t),this.state.isOmniDropdownOpen!==!1&&this._hideDropdown()},onKeyDown:function(e){13===e.keyCode&&this._search(e.target)}-] {+_search:function(e,x){C.cancel&&C.cancel(),b=[];var t=this.props.currentSearchEngine&&this.props.currentSearchEngine.Url;if(l.setState(this.props.page,{editText:e.value}),!t){var n=this._getDefaultSearchEngine();t=n.Url}e.value&&e.value.length>0&&this.props.onEnterPressed(e.value,t,(x.shiftKey||x.altKey)?{inCurrent:!1}:{}),this.state.isOmniDropdownOpen!==!1&&this._hideDropdown()},onKeyDown:function(e){13===e.keyCode&&this._search(e.target,e)}+}
+======================================================================
