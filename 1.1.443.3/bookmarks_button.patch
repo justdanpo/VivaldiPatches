@@ -1,0 +1,6 @@
+﻿#Bookmarks button before AddressBar
+#Кнопка с выпадающими закладками перед строкой адреса
+========================================================
+#n(262):BookmarksBar
+ [-,r.createElement("div",{ref:"addressfield",-] {+,r.createElement(n(262),{useTabColor:!0}),(function(){var style=document.getElementsByClassName("bookmark-bar");if(style&&style.length){style=style[0].style;style["background"]="transparent";style["height"]="auto";style["box-shadow"]="none";}})(),r.createElement("div",{ref:"addressfield",+}
+========================================================
