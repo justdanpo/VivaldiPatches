@@ -1,0 +1,5 @@
+﻿#Show progressbar on open url with no delay. V2. Removes a delay when a page is opened from a browser's internal page (such as Speed Dial).
+#Показ прогрессбара при открытии ссылки без задержек. V2. Удаляет задержку при открытии ссылки из внутренних страниц браузера (например из Экспресс Панели).
+ [-currentPageId:e.get("id"),isStarted:!0}-] {+currentPageId:e.get("id"),isStarted:!0,isProgressing:!0}+}
+==================================
+ [-start"===n?this.setState({isProgressing:!1,progress:0}-] {+start"===n?this.setState({isProgressing:!0,progress:.1}+}

@@ -1,0 +1,15 @@
+﻿#Fix unicode urls in the addressbar & statusbar
+#Исправление национальных символов в ссылках в адресной и статусной строке
+======================================================================
+#n(25):url
+#n(186):punycode
+======================================================================
+#_UrlUtility
+ [-this._defaultMapUrlToDisplayUrl(e,r);break}}return e},-] {+this._defaultMapUrlToDisplayUrl(e,r);break}}return e},this.cvturl=function(e){var hn=n(25).parse(e).hostname+"";var uhn=n(186).toUnicode(hn);return e.replace(hn,uhn).replace(/ /g,"%20");},+}
+======================================================================
+#r=_decodeDisplayURL:n(_UrlUtility)
+ [-var t=i.removeTrailingSlashWhenNoPath(i.getDisplayUrl(e));return o(t.replace(/%25/g,"%2525"))-] {+var t=i.removeTrailingSlashWhenNoPath(i.getDisplayUrl(e));return r.urls.cvturl(o(t.replace(/%25/g,"%2525")))+}
+======================================================================
+#U=WebPageContent:n(_UrlUtility)
+ [-handleOnTargetURLChanged:function(e){var t=e.newUrl,n=V(t);v.setTargetURL(n);var r=f.parse(n);"mailto:"!==r.protocol&&(r.auth=""),g.setStatus(f.format(r))}-] {+handleOnTargetURLChanged:function(e){var t=e.newUrl,n=V(t);v.setTargetURL(n);var r=f.parse(n);"mailto:"!==r.protocol&&(r.auth=""),g.setStatus(U.urls.cvturl(f.format(r)))}+}
+======================================================================
