@@ -12,3 +12,5 @@
 #A=BookmarksBar:n(_ResizeTriggers_wrapper)
  [-}n.push(this.getBookmarkBarButton(o)),t=a}var s=e>0?r.createElement("button",{className:"chevron",title:p("More bookmarks"),-] {+}n.push(this.getBookmarkBarButton(o)),t=a} if(this.props.buttonToolbar)return r.createElement("div",{}, r.createElement(A, {className: "observer",embedCss: !1,onResize: this.onResize}, n), r.createElement("button",{className:"button-toolbar",title:p("Bookmarks"),onClick:m(this.getExtenderButtonItems,null,"bottom"),onBlur: this.onLostFocus,onFocus: this.onGotFocus,dangerouslySetInnerHTML:{__html:svgbookmark},style:{outline:"none",boxShadow:"none"}}));var s=e>0?r.createElement("button",{className:"chevron",title:p("More bookmarks"),+}
 ========================================================
+ [-_onStoreChange:function(){var e=a.getBookmarksBar(),-] {+_onStoreChange:function(){var e=this.props.buttonToolbar?a.getBookmarksData():a.getBookmarksBar(),+}
+========================================================
