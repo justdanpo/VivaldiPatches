@@ -1,0 +1,12 @@
+﻿#Search Suggest URL editor
+#Редактор ссылок для получения поисковых подсказок
+======================================================================
+ [-foundSearchEngine:!1,seUrl:"",seName:"",seKeyword:"",-] {+foundSearchEngine:!1,seUrl:"",seSuggestUrl:"",seName:"",seKeyword:"",+}
+======================================================================
+ [-return e.state.selectedSearchEngineId===t.Id&&(t.Url=e.refs.urlInput.value,t.Name=e.refs.nameInput.value,t.Keyword=e.refs.keywordInput.value),t})}),this.setState({selectedSearchEngineId:-1,seUrl:"",seName:"",seKeyword:""-] {+return e.state.selectedSearchEngineId===t.Id&&(t.Url=e.refs.urlInput.value,t.SuggestUrl=e.refs.urlSuggestInput.value,t.Name=e.refs.nameInput.value,t.Keyword=e.refs.keywordInput.value),t})}),this.setState({selectedSearchEngineId:-1,seUrl:"",seSuggestUrl:"",seName:"",seKeyword:""+}
+======================================================================
+ [-if(this.state.selectedSearchEngineId===e)this.setState({selectedSearchEngineId:-1,seUrl:"",seName:"",seKeyword:""});else{var t=u.find(this.state.SEARCH_ENGINES,{Id:parseInt(e)});this.setState({selectedSearchEngineId:e,seUrl:t.Url,seName:t.Name,seKeyword:t.Keyword-] {+if(this.state.selectedSearchEngineId===e)this.setState({selectedSearchEngineId:-1,seUrl:"",seSuggestUrl:"",seName:"",seKeyword:""});else{var t=u.find(this.state.SEARCH_ENGINES,{Id:parseInt(e)});this.setState({selectedSearchEngineId:e,seUrl:t.Url,seSuggestUrl:t.SuggestUrl,seName:t.Name,seKeyword:t.Keyword+}
+======================================================================
+#l=SearchEngines:n(_getLocalizedMessage)
+ [-onChange:this.changeValue.bind(this,"seUrl")})),r.createElement("div",{className:"setting-flexgroup"},r.createElement("input",{className:"setting-single-flex",-] {+onChange:this.changeValue.bind(this,"seUrl")})),r.createElement("div",{className:"setting-flexgroup"},r.createElement("input",{ref:"urlSuggestInput",className:"searchengine_url setting-single-flex",type:"text",title:l("Search Suggest Address"),placeholder:l("Suggest URL"),value:this.state.seSuggestUrl,onChange:this.changeValue.bind(this,"seSuggestUrl")})),r.createElement("div",{className:"setting-flexgroup"},r.createElement("input",{className:"setting-single-flex",+}
+======================================================================
