@@ -1,0 +1,5 @@
+#Don't enable thumbnail mode in tabbar when a border between tabbar and addressbar is doubleclicked
+#Не включать показ миниатюр в табах двойным кликом по границе между табом и адресной строкой
+======================================================================
+ [-(this.state.tabsHeight=L,f.set({TAB_THUMBNAILS_ENABLED:!0}))-] {+(!1)+}
+======================================================================
