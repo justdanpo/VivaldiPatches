@@ -1,0 +1,6 @@
+﻿#MiddleClick on New Tab button to Paste And Go
+#Клик средней кнопкой мыши по кнопке "[+]" открывает ссылку из буфера
+======================================================================
+#n(50):_UrlFieldActions
+ [-key:"onMouseUpInNewTab",value:function(e){1===e.button&&this.createTab(e)-] {+key:"onMouseUpInNewTab",value:function(e){if(e&&1===e.button){e.stopPropagation();var txt,t=function(t){t.clipboardData.types.indexOf("text/plain")>-1&&(txt=t.clipboardData.getData("text/plain"),t.preventDefault())};document.addEventListener("paste",t),document.execCommand("paste"),document.removeEventListener("paste",t);n(50).go(txt,{inCurrent:!1,addTypedHistory:!0,addTypedSearchHistory:!1,enableSearch:!0});}+}
+======================================================================
