@@ -1,0 +1,7 @@
+﻿#Fix Alt+Enter in AddressBar and SearchBar
+#Исправление Alt+Enter в строке адреса и поиска
+======================================================================
+ [-ref:"search",onKeyPress:this.onKeyPressed,-] {+ref:"search",onKeyPress:this.onKeyPressed,onKeyDown:this.onKeyPressed,+}
+======================================================================
+ [-onKeyDowned:function(e){(0,l["default"])(e)||"ArrowRight"!==e.key-] {+onKeyDowned:function(e){if(e&&("Enter"==e.key))this.onKeyPressed(e);else(0,l["default"])(e)||"ArrowRight"!==e.key+}
+======================================================================
