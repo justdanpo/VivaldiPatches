@@ -1,0 +1,12 @@
+﻿#Settings: Middleclicked URL Tab Position
+#Настройки: Позиция вкладки, открываемой по средней кнопке мыши
+======================================================================
+ [-function d(e,t){var n=e.index,r=Ae.getSync("TAB_NEW_PLACEMENT");if(o(e))i(e,!1),n=e.index;else if("directrightofcurrent"===r)-] {+function d(e,t){var n=e.index,r=Ae.getSync("TAB_NEW_PLACEMENT");if(o(e))i(e,!1),n=e.index;else if(e&&e.openerTabId&&(function(){r=Ae.getSync("TAB_MIDDLECLICK_PLACEMENT")})()&&!1);else if("directrightofcurrent"===r)+}
+======================================================================
+ [-vivaldiSettingsKeys:["TAB_NEW_PLACEMENT","TAB_CLONE_PLACEMENT"]-] {+vivaldiSettingsKeys:["TAB_NEW_PLACEMENT","TAB_MIDDLECLICK_PLACEMENT","TAB_CLONE_PLACEMENT"]+}
+======================================================================
+#o=TabOpen:n(RadioGroup)
+ [-,i.createElement("span",null,l("As Last Tab"))))))),i.createElement("div",{className:"setting-group"},i.createElement("div",{className:"setting-single"},i.createElement("h3",null,l("Clone Tab Position")),-] {+,i.createElement("span",null,l("As Last Tab"))))))),i.createElement("div",{className:"setting-group"},i.createElement("div",{className:"setting-single"},i.createElement("h3",null,l("Middleclicked URL Tab Position")),i.createElement(o,{name:"tabMiddleclickOpen",value:this.state.TAB_MIDDLECLICK_PLACEMENT,onChange:this.saveVivaldiSettingFromEvent.bind(this,"TAB_MIDDLECLICK_PLACEMENT","value")},i.createElement("div",{className:"setting-single"},i.createElement("label",null,i.createElement("input",{type:"radio",value:"rightofcurrent"}),i.createElement("span",null,l("After Related Tabs")))),i.createElement("div",{className:"setting-single"},i.createElement("label",null,i.createElement("input",{type:"radio",value:"directrightofcurrent"}),i.createElement("span",null,l("After Active Tab")))),i.createElement("div",{className:"setting-single"},i.createElement("label",null,i.createElement("input",{type:"radio",value:"alwayslast"}),i.createElement("span",null,l("As Last Tab"))))))),i.createElement("div",{className:"setting-group"},i.createElement("div",{className:"setting-single"},i.createElement("h3",null,l("Clone Tab Position")),+}
+======================================================================
+ [-TAB_NEW_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",-] {+TAB_NEW_PLACEMENT:"alwayslast",TAB_MIDDLECLICK_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",+}
+======================================================================
