@@ -1,0 +1,5 @@
+﻿#Shift+Enter for new line in Description of CreateBookmark dialog
+#Shift+Enter для перевода строки при редактировании описания закладки
+========================================================
+ [-e.keyCode===c.KEY_ENTER||e.keyCode===c.KEY_RETURN?this.onSaveBookmark():-] {+(e.keyCode===c.KEY_ENTER||e.keyCode===c.KEY_RETURN)&&!e.shiftKey?this.onSaveBookmark():+}
+========================================================
