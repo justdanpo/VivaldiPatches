@@ -1,0 +1,5 @@
+﻿#"Switch Tabs by Scrolling" option doesn't affect RightClick+Wheel
+#Настройка "Переключать вкладки прокруткой" не отключает ПравыйКлик+Колесо
+======================================================================
+ [-{if(!y)return null;var i=!1;for(var o in e.path)if(e.path.hasOwnProperty(o)&&"tabs-container"===e.path[o].id){var l=e.path[o].className;if(-1===l.indexOf("overflow")){i=!0;break}}-] {+{var i=!1;for(var o in e.path)if(e.path.hasOwnProperty(o)&&"tabs-container"===e.path[o].id){var l=e.path[o].className;if(-1===l.indexOf("overflow")){if(!y)return null;i=!0;break}}+}
+======================================================================
