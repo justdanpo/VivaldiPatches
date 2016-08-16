@@ -1,0 +1,6 @@
+﻿#"Settings" in a context menu of extensions buttons
+#"Настройки" в контекстном меню кнопок расширений
+======================================================================
+#n(14):_PageActions
+ [-getInitialState:function(){return{windowId:c,menuItems:[{name:o("Hide button"),handler:this.toggleExtensionAction}]}},-] {+getInitialState:function(){this.optionsUrl=null;var optionsItem={name:o("Settings"),handler:this.options,visible:false};var __t=this;chrome.management.get(this.props.id,function(o){if(o.optionsUrl&&o.optionsUrl!==""){__t.optionsUrl=o.optionsUrl;optionsItem.visible=true}}); return{windowId:c,menuItems:[{name:o("Hide button"),handler:this.toggleExtensionAction},optionsItem]}}, options:function(){if(this.optionsUrl)n(14).openURL(this.optionsUrl,{inCurrent:false,isTyped:false})},+}
+======================================================================
