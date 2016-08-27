@@ -1,0 +1,15 @@
+﻿#Panels resize fix
+#Исправление ресайза панелей
+======================================================================
+#SlideBar.handleMouseDown 
+ [-window.addEventListener("mouseout",this.handleStop,{passive:!0}),-] {++}
+======================================================================
+#SlideBar.startDragging
+ [-,e.parentNode.style.setProperty("transition-duration","0ms")}),this.startX=e.screenX,this.startY=e.screenY},-] {+,e.parentNode.style.setProperty("transition-duration","0ms")}),this.startX=e.screenX,this.startY=e.screenY;this.panel=e.nativeEvent.target.parentNode,this.startWidth=this.panel.clientWidth,this.startHeight=this.panel.clientHeight},+}
+======================================================================
+#SlideBar.handleMove
+ [-handleMove:function(e,t){this.rafHandle&&o.cancel(this.rafHandle),this.rafHandle=o(function(){var n=void 0;"left"===this.props.position?n=e-this.startX:"right"===this.props.position?n=this.startX-e:"top"===this.props.position?n=t-this.startY:"bottom"===this.props.position&&(n=this.startY-t),this.props.onSlidebarMove(n)&&(this.startX=Math.floor(e),this.startY=Math.floor(t))}.bind(this))},-] {+handleMove:function(e,t){this.rafHandle&&o.cancel(this.rafHandle),this.rafHandle=o(function(){var rect=this.panel.getClientRects();var n=void 0;"left"===this.props.position?n=e-this.startX+this.startWidth-this.panel.clientWidth:"right"===this.props.position?n=-(e-this.startX)+this.startWidth-this.panel.clientWidth:"top"===this.props.position?n=t-this.startY+this.startHeight-this.panel.clientHeight:"bottom"===this.props.position&&(n=-(t-this.startY)+this.startHeight-this.panel.clientHeight),this.props.onSlidebarMove(n)}.bind(this))},+}
+======================================================================
+#SlideBar.handleStop
+ [-window.removeEventListener("mouseout",this.handleStop),-] {++}
+======================================================================
