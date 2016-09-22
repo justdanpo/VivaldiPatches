@@ -18,3 +18,5 @@
 #i=AddressBar:n(react_React_wrapper)
  [-,i.createElement("span",null,l("Always Prefer Bookmarks")))))-] {+,i.createElement("span",null,l("Always Prefer Bookmarks"))))),i.createElement("h3",null,l("GO button")),i.createElement("div",{className:"setting-single"},i.createElement("label",null,i.createElement("input",{type:"checkbox",checked:this.state.ADDRESS_BAR_URL_GO_ENABLED,onChange:this.saveVivaldiSettingFromEvent.bind(this,"ADDRESS_BAR_URL_GO_ENABLED","checked")}),i.createElement("span",null,l("UrlField")))),i.createElement("div",{className:"setting-single"},i.createElement("label",null,i.createElement("input",{type:"checkbox",checked:this.state.ADDRESS_BAR_SEARCH_GO_ENABLED,onChange:this.saveVivaldiSettingFromEvent.bind(this,"ADDRESS_BAR_SEARCH_GO_ENABLED","checked")}),i.createElement("span",null,l("SearchField"))))+}
 ======================================================================
+ [-urlFieldGo:function(e,t){var n=o.findDOMNode(this.refs.urlField).value.trim();-] {+urlFieldGo:function(e,t){var n=this.refs.urlField.props.editUrl;if(!n)n=this.refs.urlField.props.url;n=n.trim();+}
+======================================================================
