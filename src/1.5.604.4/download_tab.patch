@@ -11,7 +11,7 @@
 ======================================================================
 #E=WebPageContent:n(_VivaldiSettings)
 #g=WebPageContent:n(_PageActions)
- [-;r.style.width.slice(0,-2)<50&&t.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS&&l.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")-] {+;if(t.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS)if(E.getSync("SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS")) {console.log("before if");if(!downloadTabPageStore.getPages().find(function(e) {console.log("e",e);return e.get("url")==="chrome://downloads/"}))g.openURL("vivaldi://downloads",{singleton:true,inBackground:true,isTyped:false})} else r.style.width.slice(0,-2)<50&&l.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")+}
+ [-;r.style.width.slice(0,-2)<50&&t.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS&&l.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")-] {+;if(t.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS)if(E.getSync("SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS")) {if(!downloadTabPageStore.getPages().find(function(e) {return e.get("url")==="chrome://downloads/"}))g.openURL("vivaldi://downloads",{singleton:true,inBackground:true,isTyped:false})} else r.style.width.slice(0,-2)<50&&l.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")+}
 ======================================================================
 #DownloadDialog
 #c=DownloadDialog:n(_ActionManager)
