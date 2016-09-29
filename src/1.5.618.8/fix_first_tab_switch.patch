@@ -1,0 +1,5 @@
+﻿#Fix first Ctrl+Tab swith after startup (recently used order, show tab cycler)
+#Исправление первого переключения по Ctrl+Tab (переключение в порядке использования, визуальное переключение)
+======================================================================
+ [-if(u.get("TAB_CYCLING_ORDER",function(e){return r=e}),"recently used"===r)-] {+if(r=u.getSync("TAB_CYCLING_ORDER"),"recently used"===r)+}
+======================================================================
