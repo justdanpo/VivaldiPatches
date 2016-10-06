@@ -1,0 +1,26 @@
+﻿#Open Download Tab instead of Download Panel
+#Открывать загрузки во вкладке, а не в панели
+======================================================================
+ [-displayName:"DownloadSettings",mixins:[c],vivaldiSettingsKeys:[-] {+displayName:"DownloadSettings",mixins:[c],vivaldiSettingsKeys:["SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS",+}
+======================================================================
+ [-,o.createElement("span",{__source:{fileName:i,lineNumber:64}},s("Open Download Panel Automatically"))))-] {+,o.createElement("span",null,s("Open Download Panel Automatically")))),o.createElement("div",{className:"setting-single",style:{paddingLeft:"24px"}},o.createElement("label",null,o.createElement("input",{type:"checkbox",checked:this.state.SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS,onChange:this.saveVivaldiSettingFromEvent.bind(this,"SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS","checked")}),o.createElement("span",null,s("Open in Background Tab"))))+}
+======================================================================
+#WebPageContent
+#n(17):_PageStore
+ [-,K=i.createClass({displayName:"WebPageContent",-] {+,downloadTabPageStore=n(17),K=i.createClass({displayName:"WebPageContent",+}
+======================================================================
+#N=WebPageContent:n(_VivaldiSettings)
+#v=WebPageContent:n(_PageActions)
+ [-;r.style.width.slice(0,-2)<50&&t.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS&&u.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")-] {+;if(t.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS)if(N.getSync("SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS")) {console.log("before if");if(!downloadTabPageStore.getPages().find(function(e) {console.log("e",e);return e.get("url")==="chrome://downloads/"}))v.openURL("vivaldi://downloads",{singleton:true,inBackground:true,isTyped:false})} else r.style.width.slice(0,-2)<50&&u.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")+}
+======================================================================
+#DownloadDialog
+#d=DownloadDialog:n(_ActionManager)
+#l=DownloadDialog:n(_VivaldiSettings)
+#n(16):_PageActions
+#n(17):_PageStore
+ [-,onOpen:function(){this.props.customData.request.allow("open")-] {+,showDownloads:function(){if(this.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS)if(l.getSync("SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS")) {if(!n(17).getPages().find(function(e) {return e.get("url")==="chrome://downloads/"}))n(16).openURL("vivaldi://downloads",{singleton:true,inBackground:true,isTyped:false})} else !document.querySelector("#panels-container .downloads.active") && d.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL") },onOpen:function(){this.props.customData.request.allow("open")+}
+======================================================================
+ [-,!document.querySelector("#panels-container .downloads.active")&&this.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS&&d.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")-] {+,this.showDownloads()+}
+# [-,!document.querySelector("#panels-container .downloads.active")&&this.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS&&u.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")-] {+,this.showDownloads()+}
+# [-,!document.querySelector("#panels-container .downloads.active")&&this.state.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS&&u.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")-] {+,this.showDownloads()+}
+======================================================================

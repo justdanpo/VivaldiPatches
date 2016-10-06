@@ -1,0 +1,14 @@
+﻿#Settings: Child Tab Position
+#Настройки: Позиция дочерней вкладки
+======================================================================
+ [-function A(e,t){var n=e.index,r=pe.getSync("TAB_NEW_PLACEMENT");if(o(e))i(e,!1),n=e.index;else if("directrightofcurrent"===r)-] {+function A(e,t){var n=e.index,r=pe.getSync("TAB_NEW_PLACEMENT");if(o(e))i(e,!1),n=e.index;else if(e&&e.openerTabId&&(function(){r=pe.getSync("TAB_MIDDLECLICK_PLACEMENT")})()&&!1);else if("directrightofcurrent"===r)+}
+======================================================================
+ [-vivaldiSettingsKeys:["TAB_NEW_PLACEMENT","TAB_CLONE_PLACEMENT"]-] {+vivaldiSettingsKeys:["TAB_NEW_PLACEMENT","TAB_MIDDLECLICK_PLACEMENT","TAB_CLONE_PLACEMENT"]+}
+======================================================================
+#a=TabOpen:n(RadioGroup)
+ [-,o.createElement("h3",{__source:{fileName:i,lineNumber:54}},u("Clone Tab Position")),-] {+,o.createElement("h3",null,u("Child Tab Position")),o.createElement(a,{name:"tabMiddleclickOpen",value:this.state.TAB_MIDDLECLICK_PLACEMENT,onChange:this.saveVivaldiSettingFromEvent.bind(this,"TAB_MIDDLECLICK_PLACEMENT","value")},o.createElement("div",{className:"setting-single"},o.createElement("label",null,o.createElement("input",{type:"radio",value:"rightofcurrent"}),o.createElement("span",null,u("After Related Tabs")))),o.createElement("div",{className:"setting-single"},o.createElement("label",null,o.createElement("input",{type:"radio",value:"directrightofcurrent"}),o.createElement("span",null,u("After Active Tab")))),o.createElement("div",{className:"setting-single"},o.createElement("label",null,o.createElement("input",{type:"radio",value:"alwayslast"}),o.createElement("span",null,u("As Last Tab"))))))),o.createElement("div",{className:"setting-group"},o.createElement("div",{className:"setting-single"},o.createElement("h3",null,u("Clone Tab Position")),+}
+======================================================================
+ [-TAB_NEW_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",-] {+TAB_NEW_PLACEMENT:"alwayslast",TAB_MIDDLECLICK_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",+}
+======================================================================
+ [-case"searchWebFor":Y.goSearchURL(t.selectionText,{inCurrent:!1});break;-] {+case"searchWebFor":Y.goSearchURL(t.selectionText,{inCurrent:!1,addOpenerTabId:!0});break;+}
+======================================================================
