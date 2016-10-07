@@ -1,0 +1,16 @@
+﻿#Bookmarks button before AddressBar
+#Кнопка с выпадающими закладками перед строкой адреса
+========================================================
+#n(381):BookmarksBar
+#n(682):_svg_panel_bookmarks
+========================================================
+ [-,o.createElement("div",{ref:"addressfield",-] {+,o.createElement(n(381),{buttonToolbar:!0}),o.createElement("div",{ref:"addressfield",+}
+========================================================
+ [-,y=i.createClass({displayName:"BookmarksBar",-] {+,svgbookmark=n(682),y=i.createClass({displayName:"BookmarksBar",+}
+========================================================
+#g=BookmarksBar:n(_ShowMenu)
+#h=BookmarksBar:n(_ResizeTriggers_wrapper)
+ [-}o.push(this.renderBookmarkBarButton(s)),t=l}var u=e>0?i.createElement("button",{className:"chevron",title:p("More bookmarks"),-] {+}o.push(this.renderBookmarkBarButton(s)),t=l}if(this.props.buttonToolbar)return i.createElement("div",{}, i.createElement(h, {className: "observer",embedCss: !1,onResize: this.onResize}, o), i.createElement("button",{className:"button-toolbar",title:p("Bookmarks"),onClick:g(this.getExtenderButtonItems,null,"bottom"),onBlur: this.onLostFocus,onFocus: this.onGotFocus,dangerouslySetInnerHTML:{__html:svgbookmark},style:{outline:"none",boxShadow:"none"}}));var u=e>0?i.createElement("button",{className:"chevron",title:p("More bookmarks"),+}
+========================================================
+ [-_onStoreChange:function(){var e=s.getBookmarksBarNodes(),-] {+_onStoreChange:function(){var e=this.props.buttonToolbar?s.getBookmarksData():s.getBookmarksBarNodes(),+}
+========================================================
