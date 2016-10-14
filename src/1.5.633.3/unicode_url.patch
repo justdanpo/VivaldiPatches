@@ -1,0 +1,12 @@
+﻿#Fix unicode urls in the addressbar & statusbar
+#Исправление национальных символов в ссылках в адресной и статусной строке
+======================================================================
+#n(28):url
+#n(256):punycode
+======================================================================
+#_UrlUtility
+ [-this._defaultMapUrlToDisplayUrl(e,i);break}}return e},-] {+this._defaultMapUrlToDisplayUrl(e,i);break}}return e},this.cvturl=function(e){var hn=n(28).parse(e).hostname+"";var uhn=n(256).toUnicode(hn);return e.replace(hn,uhn).replace(/ /g,"%20");},+}
+======================================================================
+#s=_decodeDisplayURL:n(_UrlUtility)
+ [-var n=o.removeTrailingSlashWhenNoPath(o.getDisplayUrl(e));return l(n.replace(/%25/g,"%2525")).replace(/%20/g," ")-] {+var n=o.removeTrailingSlashWhenNoPath(o.getDisplayUrl(e));return o.urls.cvturl(l(n.replace(/%25/g,"%2525")))+}
+======================================================================
