@@ -1,0 +1,6 @@
+﻿#Autocomplete to domain first
+#Автодополнение сперва предлагает домен
+======================================================================
+#P=UrlField:n(url)
+ [-,this.refs.urlInput.selectionDirection="backward"):(U(i.substr(0,a))&&(this._compProtocol=i.substr(0,a)),this._completed=!0,s&&(E.setUrlfieldState(this.props.pageId,{editUrl:i.substr(a),selectionStart:t,-] {+,this.refs.urlInput.selectionDirection="backward"):(U(i.substr(0,a))&&(this._compProtocol=i.substr(0,a)),this._completed=!0,s&&((function(url){var parsed=P.parse(i.substr(a));var host=(parsed.protocol?parsed.protocol+(parsed.slashes?"//":""):"")+(parsed.hostname?parsed.hostname:"")+(parsed.pathname?parsed.pathname.replace(/^(.*?\/).*/,"$1"):"");if(host.length>url.length)i=i.substr(0,a)+host})(this._typedUrl),E.setUrlfieldState(this.props.pageId,{editUrl:i.substr(a),selectionStart:t,+}
+======================================================================
