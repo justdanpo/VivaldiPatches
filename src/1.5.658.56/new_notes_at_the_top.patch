@@ -1,0 +1,7 @@
+﻿#New notes at the top
+#Новые заметки в начале
+======================================================================
+ [-p.notes.create({parentId:e.parentId.toString(),attachments:e.attachments,content:e.content,title:e.title,index:e.index,-] {+p.notes.create({parentId:e.parentId.toString(),attachments:e.attachments,content:e.content,title:e.title,index:0,+}
+======================================================================
+ [-case"addNewNote":G.notes.create({type:"note",content:t.selectionText,url:t.pageUrl}-] {+case"addNewNote":G.notes.create({type:"note",content:t.selectionText,url:t.pageUrl,index:0}+}
+======================================================================
