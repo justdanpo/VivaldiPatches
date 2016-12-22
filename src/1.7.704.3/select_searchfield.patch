@@ -1,0 +1,5 @@
+﻿#Select text on searchfield focus
+#Выделение текста при активации поля поиска
+======================================================================
+ [-_pageDown=void 0}finally{this._isNavigationInitialized=!1}},onFocus:function(){this.setState({focused:!0}),this._initializeNavigation()},onBlur:-] {+_pageDown=void 0}finally{this._isNavigationInitialized=!1}},onFocus:function(){if(!this.state.focused){this.focusField();}this.setState({focused:!0}),this._initializeNavigation()},onBlur:+}
+======================================================================
