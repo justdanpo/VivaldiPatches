@@ -1,0 +1,7 @@
+﻿#"Switch Tabs by Scrolling" option doesn't affect RightClick+Wheel
+#Настройка "Переключать вкладки прокруткой" не отключает ПравыйКлик+Колесо
+======================================================================
+# [-{if(!S)return null;var s=!1;for(var c in e.path)if(e.path.hasOwnProperty(c)&&"tabs-container"===e.path[c].id){var u=e.path[c].className;if(u.indexOf("overflow")===-1){s=!0;break}}-] {+{var s=!1;for(var c in e.path)if(e.path.hasOwnProperty(c)&&"tabs-container"===e.path[c].id){var u=e.path[c].className;if(-1===u.indexOf("overflow")){if(!S)return null;s=!0;break}}+}
+ [-,window.clearTimeout(this.delayTimeout),this.delayTimeout=setTimeout(function(){V=!1},100)),e.preventDefault()}}else{if(!S)return null;-] {+,window.clearTimeout(this.delayTimeout),this.delayTimeout=setTimeout(function(){V=!1},100)),e.preventDefault()}}else{+}
+ [-var s=!1;for(var c in e.path)if(e.path.hasOwnProperty(c)&&"tabs-container"===e.path[c].id){var u=e.path[c].className;if(u.indexOf("overflow")===-1){s=!0;break}}-] {+var s=!1;for(var c in e.path)if(e.path.hasOwnProperty(c)&&"tabs-container"===e.path[c].id){var u=e.path[c].className;if(-1===u.indexOf("overflow")){if(!S)return null;s=!0;break}}+}
+======================================================================
