@@ -1,0 +1,7 @@
+﻿#New notes at the top
+#Новые заметки в начале
+======================================================================
+ [-{p.notes.create({parentId:e.parentId.toString(),attachments:e.attachments,content:e.content,title:e.title,url:e.url,index:e.index,-] {+{p.notes.create({parentId:e.parentId.toString(),attachments:e.attachments,content:e.content,title:e.title,url:e.url,index:0,+}
+======================================================================
+ [-if("copyToNote"===e.command)Te.default.notes.create({type:"note",content:e.text,url:e.url});-] {+if("copyToNote"===e.command)Te.default.notes.create({type:"note",content:e.text,url:e.url,index:0});+}
+======================================================================
