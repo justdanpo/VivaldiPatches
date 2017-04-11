@@ -1,0 +1,20 @@
+﻿#GO button
+#Кнопка перехода по ссылке из адресной строки
+======================================================================
+ [-,this.toggleShowTypedHistory=-] {+,this.urlFieldGoMC=function(t){e.urlFieldGo(t,{inCurrent:t.button!==1})},this.searchFieldGoMC=function(t){e.onSearch(e.state.searchText,e.state.currentSearchEngine,{inCurrent:!(t&&t.button===1)});},e.toggleShowTypedHistory=+}
+======================================================================
+#c=UrlBar:n(react_React_wrapper)
+#re:lineNumber:\d+
+ [-isSearchOn:e.SEARCH_FIELD_ENABLED,thumbnail:this.state.page.getIn(["extData","thumbnail"]),__source:{fileName:o,lineNumber:1095}})),e.SEARCH_FIELD_ENABLED&&this.state.searchEnginesCleaned&&c.createElement(w,{currentSearchEngine:this.state.currentSearchEngine,-] {+isSearchOn:e.SEARCH_FIELD_ENABLED,thumbnail:this.state.page.getIn(["extData","thumbnail"])})),e.ADDRESS_BAR_URL_GO_ENABLED&&c.createElement("button",{className:"button-toolbar buttonGo",ref:"webpageview_nav_go",onMouseUp:this.urlFieldGoMC,style:{outline:"none",boxShadow:"none"}},c.createElement("svg",{width:"26",height:"26",viewBox:"0 0 26 26",},c.createElement("path",{d:"M 12,4 10.400391,5.5996094 16.5,11.869141 l -13.5,0 0,2.261718 13.5,0 -6.099609,6.269532 L 12,22 21,13 12,4 Z"}))),e.SEARCH_FIELD_ENABLED&&this.state.searchEnginesCleaned&&c.createElement(w,{currentSearchEngine:this.state.currentSearchEngine,+}
+======================================================================
+#c=UrlBar:n(react_React_wrapper)
+#re:lineNumber:\d+
+ [-suggestEnabled:e.SEARCH_FIELD_SUGGEST_ENABLED,value:this.state.searchText,__source:{fileName:o,lineNumber:1110}})-] {+suggestEnabled:e.SEARCH_FIELD_SUGGEST_ENABLED,value:this.state.searchText}),e.SEARCH_FIELD_ENABLED&&e.ADDRESS_BAR_SEARCH_GO_ENABLED&&c.createElement("button",{className:"button-toolbar buttonSearchGo",ref:"webpageview_nav_s_go",onMouseUp:this.searchFieldGoMC,style:{outline:"none",boxShadow:"none"}},c.createElement("svg",{width:"26",height:"26",viewBox:"0 0 26 26",},c.createElement("path",{d:"M 12,4 10.400391,5.5996094 16.5,11.869141 l -13.5,0 0,2.261718 13.5,0 -6.099609,6.269532 L 12,22 21,13 12,4 Z"})))+}
+======================================================================
+ [-,"URLFIELD_TYPED_HISTORY_ENABLED"],-] {+,"ADDRESS_BAR_URL_GO_ENABLED","ADDRESS_BAR_SEARCH_GO_ENABLED","URLFIELD_TYPED_HISTORY_ENABLED"],+}
+======================================================================
+ [-"ADDRESS_BAR_SHOW_PROGRESS",-] {+"ADDRESS_BAR_SHOW_PROGRESS","ADDRESS_BAR_URL_GO_ENABLED","ADDRESS_BAR_SEARCH_GO_ENABLED",+}
+======================================================================
+#re:lineNumber:\d+
+ [-onChange:p.default.bind(null,"ADDRESS_BAR_CUTCOPY_ENCODED","checked"),__source:{fileName:a,lineNumber:127}}),u.default.createElement("span",{__source:{fileName:a,lineNumber:131}},(0,v.default)("Cut and Copy Encoded"))))-] {+onChange:p.default.bind(null,"ADDRESS_BAR_CUTCOPY_ENCODED","checked"),__source:{fileName:a,lineNumber:117}}),u.default.createElement("span",{__source:{fileName:a,lineNumber:127}},(0,v.default)("Cut and Copy Encoded")))),u.default.createElement("h3",null,(0,v.default)("GO button")),u.default.createElement("div",{className:"setting-single"},u.default.createElement("label",null,u.default.createElement("input",{type:"checkbox",checked:this.props.vivaldiSettings.ADDRESS_BAR_URL_GO_ENABLED,onChange:p.default.bind(this,"ADDRESS_BAR_URL_GO_ENABLED","checked")}),u.default.createElement("span",null,(0,v.default)("UrlField")))),u.default.createElement("div",{className:"setting-single"},u.default.createElement("label",null,u.default.createElement("input",{type:"checkbox",checked:this.props.vivaldiSettings.ADDRESS_BAR_SEARCH_GO_ENABLED,onChange:p.default.bind(this,"ADDRESS_BAR_SEARCH_GO_ENABLED","checked")}),u.default.createElement("span",null,(0,v.default)("SearchField"))))+}
+======================================================================
