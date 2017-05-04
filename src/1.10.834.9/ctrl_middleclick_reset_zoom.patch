@@ -1,0 +1,6 @@
+﻿#Ctrl+MiddleClick on a webpage contents - reset zoom
+#Ctrl+MiddleClick на содержимом страницы - сброс масштаба
+======================================================================
+#W=WebPageContent:n(_UIActions)
+ [-onMouseDown=function(){i.props.page.active||q.default.openPage(i.props.page)},-] {+onMouseDown=function(e){if(e.nativeEvent.ctrlKey&&e.nativeEvent.button==1){W.zoomReset();}else{i.props.page.active||q.default.openPage(i.props.page)}},+}
+======================================================================
