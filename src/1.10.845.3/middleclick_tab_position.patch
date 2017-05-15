@@ -1,0 +1,15 @@
+﻿#Settings: Child Tab Position
+#Настройки: Позиция дочерней вкладки
+======================================================================
+ [-function b(e,t){var n=e.index,i=Se.default.getSync("TAB_NEW_PLACEMENT");if(d(e))u(e,!1),n=e.index;else if("directrightofcurrent"===i)-] {+function b(e,t){var n=e.index,i=Se.default.getSync("TAB_NEW_PLACEMENT");if(d(e))u(e,!1),n=e.index;else if(e&&e.openerTabId&&(function(){i=Se.default.getSync("TAB_MIDDLECLICK_PLACEMENT")})()&&!1);else if("directrightofcurrent"===i)+}
+======================================================================
+ [-["TAB_NEW_PLACEMENT","TAB_CLONE_PLACEMENT"-] {+["TAB_NEW_PLACEMENT","TAB_MIDDLECLICK_PLACEMENT","TAB_CLONE_PLACEMENT"+}
+======================================================================
+#p=TabOpen:n(RadioGroup)
+#re:lineNumber:\d+
+ [-,d.createElement("h3",{__source:{fileName:s,lineNumber:48}},m("Cloned Tab Position")),d.createElement(p,{name:"tabClone",value:this.props.vivaldiSettings.TAB_CLONE_PLACEMENT,onChange:u.default.bind(null,"TAB_CLONE_PLACEMENT","value"),-] {+,d.createElement("h3",null,m("Child Tab Position")),d.createElement(p,{name:"tabMiddleclickOpen",value:this.props.vivaldiSettings.TAB_MIDDLECLICK_PLACEMENT,onChange:u.default.bind(this,"TAB_MIDDLECLICK_PLACEMENT","value")},d.createElement("div",{className:"setting-single"},d.createElement("label",null,d.createElement("input",{type:"radio",value:"rightofcurrent"}),d.createElement("span",null,m("After Related Tabs")))),d.createElement("div",{className:"setting-single"},d.createElement("label",null,d.createElement("input",{type:"radio",value:"directrightofcurrent"}),d.createElement("span",null,m("After Active Tab")))),d.createElement("div",{className:"setting-single"},d.createElement("label",null,d.createElement("input",{type:"radio",value:"alwayslast"}),d.createElement("span",null,m("As Last Tab"))))))),d.createElement("div",{className:"setting-group"},d.createElement("div",{className:"setting-single"},d.createElement("h3",null,m("Cloned Tab Position")),d.createElement(p,{name:"tabClone",value:this.props.vivaldiSettings.TAB_CLONE_PLACEMENT,onChange:u.default.bind(null,"TAB_CLONE_PLACEMENT","value"),+}
+======================================================================
+# [-TAB_NEW_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",-] {+TAB_NEW_PLACEMENT:"alwayslast",TAB_MIDDLECLICK_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",+}
+======================================================================
+ [-}).map(function(e){return e.Url});n.length>0&&Y.goSearchURL(e,{inCurrent:!1,useSearchEngineURL:n[0]})-] {+}).map(function(e){return e.Url});n.length>0&&Y.goSearchURL(e,{inCurrent:!1,useSearchEngineURL:n[0],addOpenerTabId:true})+}
+======================================================================
