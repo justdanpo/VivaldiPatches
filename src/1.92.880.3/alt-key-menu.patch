@@ -1,0 +1,5 @@
+﻿#Prevent Shift+Alt menu appearance
+#Не открывать меню по Shift+Alt
+========================================================
+ [-,a.onKeyDown=function(e){!0!==e.repeat&&(S===d.KEY_ALT&&a.stopMenuDetection(),(S=e.keyCode)===d.KEY_ALT-] {+,a.onKeyDown=function(e){if((e.keyCode===d.KEY_ALT)&&(e.shiftKey||e.ctrlKey)){a.stopMenuDetection();return;}!0!==e.repeat&&(S===d.KEY_ALT&&a.stopMenuDetection(),(S=e.keyCode)===d.KEY_ALT+}
+========================================================
