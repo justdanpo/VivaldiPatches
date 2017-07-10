@@ -1,0 +1,5 @@
+﻿#Tabload icon class 'progressing' with no delay
+========================================================
+#l=TabProgressIndicator:n(_NavigationState)
+ [-key:"render",value:function(){var e=this.state.progress,t=this.state.isProgressing,-] {+key:"render",value:function(){var e=this.state.progress,t=this.state.isProgressing|l.a.getNavigationInfo(this.props.page).get("isLoading"),+}
+========================================================
