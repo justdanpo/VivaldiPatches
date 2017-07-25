@@ -1,0 +1,15 @@
+﻿#Settings: Child Tab Position
+#Настройки: Позиция дочерней вкладки
+======================================================================
+ [-function v(e,t){var n=e.index,a=_e.a.getSync("TAB_NEW_PLACEMENT");if(u(e))c(e,!1),n=e.index;else if("directrightofcurrent"===a)-] {+function v(e,t){var n=e.index,a=_e.a.getSync("TAB_NEW_PLACEMENT");if(u(e))c(e,!1),n=e.index;else if(e&&e.openerTabId&&(function(){a=_e.a.getSync("TAB_MIDDLECLICK_PLACEMENT")})()&&!1);else if("directrightofcurrent"===a)+}
+======================================================================
+ [-["TAB_NEW_PLACEMENT","TAB_CLONE_PLACEMENT"-] {+["TAB_NEW_PLACEMENT","TAB_MIDDLECLICK_PLACEMENT","TAB_CLONE_PLACEMENT"+}
+======================================================================
+#l=TabOpen:n(RadioGroup)
+#re:lineNumber:\d+
+ [-,s.a.createElement("h3",{__source:{fileName:m,lineNumber:48}},n.i(d.a)("Cloned Tab Position")),s.a.createElement(l.a,{name:"tabClone",value:this.props.vivaldiSettings.TAB_CLONE_PLACEMENT,onChange:c.a.bind(null,"TAB_CLONE_PLACEMENT","value"),-] {+,s.a.createElement("h3",null,n.i(d.a)("Child Tab Position")),s.a.createElement(l.a,{name:"tabMiddleclickOpen",value:this.props.vivaldiSettings.TAB_MIDDLECLICK_PLACEMENT,onChange:c.a.bind(this,"TAB_MIDDLECLICK_PLACEMENT","value")},s.a.createElement("div",{className:"setting-single"},s.a.createElement("label",null,s.a.createElement("input",{type:"radio",value:"rightofcurrent"}),s.a.createElement("span",null,n.i(d.a)("After Related Tabs")))),s.a.createElement("div",{className:"setting-single"},s.a.createElement("label",null,s.a.createElement("input",{type:"radio",value:"directrightofcurrent"}),s.a.createElement("span",null,n.i(d.a)("After Active Tab")))),s.a.createElement("div",{className:"setting-single"},s.a.createElement("label",null,s.a.createElement("input",{type:"radio",value:"alwayslast"}),s.a.createElement("span",null,n.i(d.a)("As Last Tab"))))))),s.a.createElement("div",{className:"setting-group"},s.a.createElement("div",{className:"setting-single"},s.a.createElement("h3",null,n.i(d.a)("Cloned Tab Position")),s.a.createElement(l.a,{name:"tabClone",value:this.props.vivaldiSettings.TAB_CLONE_PLACEMENT,onChange:c.a.bind(null,"TAB_CLONE_PLACEMENT","value"),+}
+======================================================================
+# [-TAB_NEW_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",-] {+TAB_NEW_PLACEMENT:"alwayslast",TAB_MIDDLECLICK_PLACEMENT:"rightofcurrent",TAB_POSITION:"top",+}
+======================================================================
+ [-n&&J.a.goSearchURL(e,{inCurrent:!1,useSearchEngineURL:n.url})},-] {+n&&J.a.goSearchURL(e,{inCurrent:!1,useSearchEngineURL:n.url,addOpenerTabId:true})},+}
+======================================================================

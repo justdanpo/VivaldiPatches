@@ -1,0 +1,25 @@
+﻿#Open Download Tab instead of Download Panel
+#Открывать загрузки во вкладке, а не в панели
+======================================================================
+ [-["AUTOMATICALLY_DOWNLOAD_FILES",-] {+["AUTOMATICALLY_DOWNLOAD_FILES","SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS",+}
+======================================================================
+#re:lineNumber:\d+
+ [-onChange:f.a.bind(null,"SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS","checked"),__source:{fileName:h,lineNumber:54}}),s.a.createElement("span",{__source:{fileName:h,lineNumber:58}},n.i(u.a)("Open Download Panel Automatically"))))-] {+onChange:f.a.bind(null,"SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS","checked"),__source:{fileName:h,lineNumber:56}}),s.a.createElement("span",null,n.i(u.a)("Open Download Panel Automatically")))),s.a.createElement("div",{className:"setting-single",style:{paddingLeft:"24px"}},s.a.createElement("label",null,s.a.createElement("input",{type:"checkbox",checked:this.props.vivaldiSettings.SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS,onChange:f.a.bind(this,"SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS","checked")}),s.a.createElement("span",null,n.i(u.a)("Open in Background Tab"))))+}
+======================================================================
+#WebPageContent
+#n(14):_PageStore
+ [-=["SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS","SHOW_POPUPS_IN_TABS","READER_MODE_STYLE","READER_MODE_INLINE_SETTING"],-] {+=["SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS","SHOW_POPUPS_IN_TABS","READER_MODE_STYLE","READER_MODE_INLINE_SETTING","SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS"],downloadTabPageStore=n(14).default,+}
+======================================================================
+#A=WebPageContent:n(_PageActions)
+ [-!r.props.vivaldiSettings.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS||"downloads"===a&&i>50||f.a.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")-] {+if(!r.props.vivaldiSettings.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS);else if(r.props.vivaldiSettings.SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS){if(!downloadTabPageStore.getPages().find(function(e){return e.get("url")==="chrome://downloads/"}))A.a.openURL("vivaldi://downloads",{singleton:true,inBackground:true,isTyped:false});}else if("downloads"===a&&i>50);else f.a.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")+}
+======================================================================
+#DownloadDialog
+ [-\\downloadDialog.jsx",-] {+\\downloadDialog.jsx",require=n,+}
+#g=DownloadDialog:n(_ActionManager)
+#m=DownloadDialog:n(_VivaldiSettings)
+#n(13):_PageActions
+#n(14):_PageStore
+ [-,r.onOpen=function(){r.props.customData.request.allow("open")-] {+,r.showDownloads=function(){var n=require;if(r.props.vivaldiSettings.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS)if(m.a.getSync("SHOW_DOWNLOADTAB_FOR_NEW_DOWNLOADS")) {if(!n(14).default.getPages().find(function(e) {return e.get("url")==="chrome://downloads/"}))n(13).a.openURL("vivaldi://downloads",{singleton:true,inBackground:true,isTyped:false})} else !document.querySelector("#panels-container .downloads.active") && g.a.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL") },r.onOpen=function(){r.props.customData.request.allow("open")+}
+======================================================================
+ [-,!document.querySelector("#panels-container .downloads.active")&&r.props.vivaldiSettings.SHOW_DOWNLOADPANEL_FOR_NEW_DOWNLOADS&&g.a.executeActions("COMMAND_SHOW_DOWNLOADS_PANEL")-] {+,r.showDownloads()+}
+======================================================================
