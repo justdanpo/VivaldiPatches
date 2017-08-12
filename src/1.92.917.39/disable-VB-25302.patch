@@ -1,0 +1,4 @@
+﻿#Disable "VB-25302 Populate Find in Page dialog with page text selection"
+======================================================================
+ [-,t=Object(pn.b)().id;dn.a.utilities.getSelectedText(t.toString(),function(t){if(t.length>0)return e.value=t.substring(0,128),a.onFindInPageTextChanged(),e.focus(),void e.select()}),-] {+;+}
+======================================================================
